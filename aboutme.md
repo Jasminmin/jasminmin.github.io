@@ -1,16 +1,18 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Work Hard , Play Hard .
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is Jasmine Chang. I have the following qualities:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- I'm a novice engineer working in R&D.
+- Like to challenge everything, expect ~~SWIMMING~~.
+- Like to do handicraft in usual.
+- Like to create graphic design by Photoshop.
 
-What else do you need?
+Do you want to learn more about me?
 
-### my history
+### Oops!
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+To be honest, I'm having some trouble remembering right now, maybe you can acquaint me with [my blog](https://jasminmin.github.io) and it will answer **all** your questions.
