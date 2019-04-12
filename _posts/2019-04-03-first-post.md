@@ -2,8 +2,8 @@
 layout: post
 title: First post!
 subtitle: 歡迎來到爵士米的部落格
-bigimg: /img/post_1_bg.png
-image: /img/post_1.png
+bigimg: /img/1080403/post_1_bg.png
+image: /img/1080403/post_1.png
 tags: [lifetime]
 ---
 
