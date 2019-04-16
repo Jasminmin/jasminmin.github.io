@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+
+  <title>Markdown怎麼用？常見指令大集合</title>
+
+  <meta name="author" content="Jasmine Chang" />
+
+  
+  <meta name="description" content="用github架設的Jekyll網站該如何撰寫文章">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Jasmine's BLOG - Technology , ArtDesign , DailyLife !" href="/feed.xml" />
+
+  
+
+  
+
+  
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-138235409-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Markdown怎麼用？常見指令大集合" />
+  
+
+   
+  <meta property="og:description" content="用github架設的Jekyll網站該如何撰寫文章">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/2019-04-16-markdown-record/" />
+  <link rel="canonical" href="http://localhost:4000/2019-04-16-markdown-record/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/profile.png" />
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Markdown怎麼用？常見指令大集合" />
+  
+
+  
+  <meta name="twitter:description" content="用github架設的Jekyll網站該如何撰寫文章">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/profile.png" />
+  
+
+  
+
+  
+
+</head>
+
+  <link rel='shortcut icon' type='image/x-icon' href='/img/favicon.ico' />
+  <body>
+
+    
+
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">Jasmine's BLOG</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">References</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="http://deanattali.com/beautiful-jekyll/">Jekyll</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="https://technews.tw">TechNews</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="https://www.ithome.com.tw">iThome</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="https://github.com/Jasminmin?tab=repositories">Github</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://localhost:4000">
+	      <img class="avatar-img" src="/img/profile.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Markdown怎麼用？常見指令大集合</h1>
+		  
+		    
+			<h2 class="post-subheading">用github架設的Jekyll網站該如何撰寫文章</h2>
+			
+		  
+		  
+		  
+		  <span class="post-meta">Posted on April 16, 2019</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      
+        
+        
+        
+
+        <div id="header-gh-btns">
+          
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=daattali&repo=beautiful-jekyll&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=daattali&repo=beautiful-jekyll&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=daattali&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              
+            
+          
+        </div>
+      
+
+      <article role="main" class="blog-post">
+        <p>Markdown是什麼呢 ( ・◇・)？<br />
+維基百科解釋如下：<br /></p>
+<blockquote>
+  <p>Markdown 是一種輕量級標記式語言，創始人為約翰·格魯伯（John Gruber）。它允許人們「使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML(或者HTML)文件」。</p>
+</blockquote>
+
+<p>簡而言之，Markdown是讓我們可以不用撰寫落落長的HTML語法而產生的標記式語言 ƪ(˘⌣˘)ʃ<br />
+舉個栗子🌰，網頁編輯時如果需要一個列表，HTML撰寫方式如下：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">"text-align: left;"</span><span class="nt">&gt;&lt;b&gt;</span>這是標題<span class="nt">&lt;/b&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">"text-align: left;"</span><span class="nt">&gt;</span>這是列表一<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">style=</span><span class="s">"text-align: left;"</span><span class="nt">&gt;</span>這是列表二<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;ul&gt;</span>
+</code></pre></div></div>
+<p>如果使用Markdown，我們只需要撰寫：</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">*</span> 這是標題
+<span class="p">  *</span> 這是列表一
+<span class="p">  *</span> 這是列表二
+</code></pre></div></div>
+
+<p>以上兩種撰寫方式所呈現的效果都是：</p>
+<ul>
+  <li>這是標題
+    <ul>
+      <li>這是列表一</li>
+      <li>這是列表二</li>
+    </ul>
+  </li>
+</ul>
+
+<p>就是這麼好用！！！接下來就介紹我們常見的markdown語法吧～</p>
+
+<hr />
+
+<h3 id="段落與換行"><font color="#6495ED">段落與換行</font></h3>
+<ol>
+  <li>段落：於文章中如需分開章節切割段落，需「換行」。</li>
+  <li>換行：於文中段落中如需換行，可於句末輸入<strong>&lt; br &gt;</strong>。</li>
+</ol>
+
+<h3 id="字體樣式及標題"><font color="#6495ED">字體樣式及標題</font></h3>
+<ol>
+  <li>粗體字<br />
+    <ul>
+      <li>Code<br />
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**This is Bold text**
+</code></pre></div>        </div>
+      </li>
+      <li>Example<br />
+<strong>This is Bold text</strong></li>
+    </ul>
+  </li>
+  <li>斜體字
+    <ul>
+      <li>Code<br />
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_This is Italics text_
+*This is Italics text*
+</code></pre></div>        </div>
+      </li>
+      <li>Example<br />
+<em>This is Ittalics text</em></li>
+    </ul>
+  </li>
+  <li>刪除線
+    <ul>
+      <li>Code<br />
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~~This is Deleted text~~
+</code></pre></div>        </div>
+      </li>
+      <li>Example<br />
+<del>This is Deleted text</del></li>
+    </ul>
+  </li>
+  <li>標題大小
+    <ul>
+      <li>Code<br />
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This is &lt;h1&gt; Header.
+## This is &lt;h2&gt; Header.
+### This is &lt;h3&gt; Header.
+#### This is &lt;h4&gt; Header.
+</code></pre></div>        </div>
+      </li>
+      <li>Example<br />
+        <h1 id="this-is-h1-header">This is &lt;h1&gt; Header.</h1>
+        <h2 id="this-is-h2-header">This is &lt;h2&gt; Header.</h2>
+        <h3 id="this-is-h3-header">This is &lt;h3&gt; Header.</h3>
+        <h4 id="this-is-h4-header">This is &lt;h4&gt; Header.</h4>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="清單列表"><font color="#6495ED">清單列表</font></h3>
+<p>1.數字階層<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#以數字開頭「.」符號做區隔，符號後需空格
+1. 第1層
+  1. 第1-1層
+  2. 第1-2層
+2. 第2層
+  1. 第2-1層
+</code></pre></div></div>
+<p>2.符號階層<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+ 第1層
+  * 第1-1層
+  * 第1-2層
++ 第2層
+  * 第2-1層
+</code></pre></div></div>
+
+<h3 id="區塊引言"><font color="#6495ED">區塊引言</font></h3>
+<ol>
+  <li>區塊
+Code<br />
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#前後加上「`」，可用於小段程式碼
+`Format one word or one line`
+</code></pre></div>    </div>
+    <p>Example<br />
+<code class="highlighter-rouge">Format one word or one line</code></p>
+  </li>
+  <li>引言
+Code<br />
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;第1層引言
+&gt;&gt;第2-1層引言&lt;br&gt;
+&gt;&gt;第2-2層引言
+</code></pre></div>    </div>
+    <p>Example<br /></p>
+    <blockquote>
+      <p>第1層引言</p>
+      <blockquote>
+        <p>第2-1層引言<br />
+第2-2層引言</p>
+      </blockquote>
+    </blockquote>
+  </li>
+</ol>
+
+<h3 id="程式碼"><font color="#6495ED">程式碼</font></h3>
+<p>Code<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>＃程式碼段落輸入「```」，可註記為何種語言，以下範例將＃拿掉
+#```javascript
+var foo = function(x) {
+  return(x + 5);
+}
+foo(3)
+#```
+</code></pre></div></div>
+<p>Example<br /></p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">foo</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+<p>以下為增加行數編號，更換```為「{o/o high1ight o/o} Code {o/o endhigh1ight o/o}」</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">foo</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<h3 id="checkbox"><font color="#6495ED">Checkbox</font></h3>
+<p>Code<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- [x] This is a complete item
+- [ ] This is an incomplete item
+</code></pre></div></div>
+<p>Example<br /></p>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />This is a complete item</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />This is an incomplete item</li>
+</ul>
+
+<h3 id="超連結"><font color="#6495ED">超連結</font></h3>
+<ol>
+  <li>網址連結
+    <ul>
+      <li>Code<br />
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>前往至[Google](https://www.google.com/)
+</code></pre></div>        </div>
+      </li>
+      <li>Example<br />
+前往至<a href="https://www.google.com/">Google</a></li>
+    </ul>
+  </li>
+  <li>圖片連結
+    <ul>
+      <li>Code<br />
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#網址連結寫法前方加上！
+![Alt text](/img/avatar-icon.png)
+</code></pre></div>        </div>
+      </li>
+      <li>Example<br />
+<img src="/img/avatar-icon.png" alt="Alt text" width="50%" /></li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="表格"><font color="#6495ED">表格</font></h3>
+<p>Code<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Number | Next number | Previous number |
+| :------ |:--- | :--- |
+| Five | Six | Four |
+| Ten | Eleven | Nine |
+| Seven | Eight | Six |
+| Two | Three | One |
+</code></pre></div></div>
+<p>Example</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Number</th>
+      <th style="text-align: left">Next number</th>
+      <th style="text-align: left">Previous number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Five</td>
+      <td style="text-align: left">Six</td>
+      <td style="text-align: left">Four</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Ten</td>
+      <td style="text-align: left">Eleven</td>
+      <td style="text-align: left">Nine</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Seven</td>
+      <td style="text-align: left">Eight</td>
+      <td style="text-align: left">Six</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Two</td>
+      <td style="text-align: left">Three</td>
+      <td style="text-align: left">One</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="boxes"><font color="#6495ED">Boxes</font></h3>
+
+<ul>
+  <li>Notification：<code class="highlighter-rouge">{: .box-note}</code></li>
+</ul>
+
+<p class="box-note"><strong>Note:</strong> This is a notification box.</p>
+
+<ul>
+  <li>Warning：<code class="highlighter-rouge">{: .box-warning}</code></li>
+</ul>
+
+<p class="box-warning"><strong>Warning:</strong> This is a warning box.</p>
+
+<ul>
+  <li>Error：<code class="highlighter-rouge">{: .box-error}</code></li>
+</ul>
+
+<p class="box-error"><strong>Error:</strong> This is an error box.</p>
+
+<h3 id="分隔線"><font color="#6495ED">分隔線</font></h3>
+
+<p>Code<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#三個或以上的「 _ 」、「 - 」、「 * 」
+___
+***
+---
+</code></pre></div></div>
+<p>Example<br /></p>
+
+<hr />
+
+<p>以上，這些是常用的Markdown～<br />
+大家在撰寫文章可以多利用，提高寫文章的速度<br />
+但還是有些輔助設定還是要用HTML喔<br />
+例如：圖片大小、文字顏色等等<br />
+希望大家都喜歡這篇文章 (๑ↀᆺↀ๑)✧</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#tech">tech</a>
+          
+            <a href="/tags#markdown">markdown</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=Markdown%E6%80%8E%E9%BA%BC%E7%94%A8%EF%BC%9F%E5%B8%B8%E8%A6%8B%E6%8C%87%E4%BB%A4%E5%A4%A7%E9%9B%86%E5%90%88+http://localhost:4000/2019-04-16-markdown-record/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-04-16-markdown-record/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-04-16-markdown-record/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2019-04-11-cloud-invoice/" data-toggle="tooltip" data-placement="top" title="雲端發票怎麼用？申請教學及秘技解說">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'jasminmin';
+        /* ensure that pages with query string get the same discussion */
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </div>
+          
+        <div class="staticman-comments">
+          
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li><li><a href="mailto:jasminmin.chang@gmail.com" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li><li><a href="https://www.facebook.com/jasminmin.chang" title="Facebook"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li><li><a href="https://github.com/jasminmin" title="GitHub"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li><li><a href="https://www.instagram.com/youandme_handcraft" title="Instagram"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Instagram</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      Jasmine Chang
+      &nbsp;&bull;&nbsp;
+      2019
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://localhost:4000">jasminmin.com</a>
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+  
+  </body>
+</html>

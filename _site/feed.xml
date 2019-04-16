@@ -7,6 +7,17 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Markdown怎麼用？常見指令大集合</title>
+        <description>
+          用github架設的Jekyll網站該如何撰寫文章 - 
+          Markdown是什麼呢 ( ・◇・)？ 維基百科解釋如下： Markdown 是一種輕量級標記式語言，創始人為約翰·格魯伯（John Gruber）。它允許人們「使用易讀易寫的純文字格式編寫文件，然後轉換成有效的XHTML(或者HTML)文件」。 簡而言之，Markdown是讓我們可以不用撰寫落落長的HTML語法而產生的標記式語言 ƪ(˘⌣˘)ʃ 舉個栗子🌰，網頁編輯時如果需要一個列表，HTML撰寫方式如下： &amp;lt;ul&amp;gt; &amp;lt;li style=&quot;text-align: left;&quot;&amp;gt;&amp;lt;b&amp;gt;這是標題&amp;lt;/b&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li style=&quot;text-align: left;&quot;&amp;gt;這是列表一&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li style=&quot;text-align: left;&quot;&amp;gt;這是列表二&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;ul&amp;gt; 如果使用Markdown，我們只需要撰寫： * 這是標題 * 這是列表一 * 這是列表二 以上兩種撰寫方式所呈現的效果都是： 這是標題 這是列表一 這是列表二 就是這麼好用！！！接下來就介紹我們常見的markdown語法吧～ 段落與換行 段落：於文章中如需分開章節切割段落，需「換行」。 換行：於文中段落中如需換行，可於句末輸入&amp;lt; br &amp;gt;。 字體樣式及標題 粗體字 Code **This is Bold text** Example...
+        </description>
+        <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/2019-04-16-markdown-record/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-04-16-markdown-record/</guid>
+      </item>
+    
+      <item>
         <title>雲端發票怎麼用？申請教學及秘技解說</title>
         <description>
           一起節能減碳，無紙化發票吧！ - 
@@ -33,17 +44,6 @@ ENJOY IT!
         <pubDate>Wed, 03 Apr 2019 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/2019-04-03-first-post/</link>
         <guid isPermaLink="true">http://localhost:4000/2019-04-03-first-post/</guid>
-      </item>
-    
-      <item>
-        <title>Test markdown</title>
-        <description>
-          Each post also has a subtitle - 
-          You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it’ll teach you how to transform regular text into bold/italics/headings/tables/etc. Here is some bold text Here is a...
-        </description>
-        <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/2019-04-01-test-markdown/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019-04-01-test-markdown/</guid>
       </item>
     
   </channel>
