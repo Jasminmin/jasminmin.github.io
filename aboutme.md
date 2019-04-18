@@ -2,6 +2,7 @@
 layout: page
 title: About me
 subtitle: Work Hard , Play Hard .
+bigimg: /img/bg.png
 ---
 
 My name is Jasmine Chang. I have the following qualities:
@@ -15,4 +16,4 @@ Do you want to learn more about me?
 
 ### Oops!
 
-To be honest, I'm having some trouble remembering right now, maybe you can acquaint me with [my blog](https://jasminmin.github.io) and it will answer **all** your questions.
+To be honest, I'm having some trouble remembering right now, maybe you can acquaint me with [my blog](https://jasminmin.github.io) or [my instagram](https://www.instagram.com/huimin.chang/), and it will answer **all** your questions.
