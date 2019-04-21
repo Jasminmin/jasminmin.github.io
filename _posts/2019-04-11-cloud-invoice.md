@@ -19,7 +19,7 @@ tags: [lifetime]
 首先到[Google Play商店](https://play.google.com/store/apps/details?id=com.cloudmobile.einvoice&hl=zh_TW)或[App Store](https://itunes.apple.com/tw/app/雲端發票/id512920023?mt=8)下載「雲端發票」App<br>
 完成後開啟App並點擊「註冊帳號」，如果在電腦操作，可至[雲端發票](https://www.ecloudlife.com/register)網站進行註冊喔！
 
-![](/img/1080411/1.jpg){:width="30%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/2.jpg){:width="30%"} 
+![](/img/1080411/1.jpg){:width="40%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/2.jpg){:width="40%"} 
 
 帳號申請只需要填寫手機及電子信箱就可以註冊囉！<br>
 完成註冊後填寫郵箱帳號、手機號碼、密碼進行登入，恭喜大家進入無紙化發票的世界～<br>
@@ -27,7 +27,7 @@ tags: [lifetime]
 只要開啟條碼嗶嗶兩聲我們就減少一張熱感應紙的產生！！！<br>
 覺得還要開App很麻煩嗎？秘技中會告訴你怎麼建立捷徑（讓我們繼續看下去）<br>
 
-![](/img/1080411/3.jpg){:width="30%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/4.jpg){:width="30%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/5.jpg){:width="30%"}
+![](/img/1080411/3.jpg){:width="40%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/4.jpg){:width="40%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/5.jpg){:width="40%"}
 
 ## Step2 載具歸戶
 
@@ -36,15 +36,15 @@ tags: [lifetime]
 「歸戶」是指買受人將已連結於載具下之電子發票資訊，再連結至身分識別資訊或共通性載具之方式，簡而言之就是**將載具實名化**。<br>
 
 把載具歸戶有什麼好處呢？<br>
-**不用嗶條碼！！！**不用拿紙本發票又不用拿手機出來，這就是科技帶領人類進的便利呀<br>
+**不用嗶條碼！！！**不用拿紙本發票又不用拿手機出來，這就是科技帶領人類進步的便利呀<br>
 
 開始把所有卡一次做完歸戶吧！<br>
 開啟App後點擊下方選單最右側「我的」標籤頁，然後點擊「帳號設定」<br>
 於帳號設定中點擊「設定載具歸戶」，我們就可以開始根據卡片類別，將每張卡片都歸戶囉<br>
 
-![](/img/1080411/6.jpg){:width="30%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/7.jpg){:width="30%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/8.jpg){:width="30%"}
+![](/img/1080411/6.jpg){:width="40%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/7.jpg){:width="40%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/8.jpg){:width="40%"}
 
-## Step3  設定領獎資料
+## Step3 設定領獎資料
 
 設定領獎資料有哪些好處呢？<br>
 1、**中獎免扣千分之四的印花稅，當你中一千萬就可以少叩四萬印花稅！**<br>
@@ -54,7 +54,7 @@ tags: [lifetime]
 設定選項一樣位於「我的」標籤頁，點擊「帳號設定」，「設定領獎資料」就在剛剛設定載具歸戶的下方喔<br>
 依據表格內容填寫自己想要收到獎金的帳戶，這樣就完成囉～是不是很簡單呢？<br>
 
-![](/img/1080411/6.jpg){:width="30%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/10.jpg){:width="30%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/9.jpg){:width="30%"}
+![](/img/1080411/6.jpg){:width="40%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/10.jpg){:width="40%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/9.jpg){:width="40%"}
 
 ## 秘技大公開
 
@@ -67,12 +67,12 @@ tags: [lifetime]
 Ｑ：每次都要開啟App刷條碼好麻煩，要怎麼建立捷徑呢？<br>
 Ａ：以iPhone設定為例，將畫面滑至最左工作區的捷徑進行編輯，將雲端發票App加入捷徑中，即使不解鎖也可以快速給店員刷載具條碼囉～
 
-![](/img/1080411/11.jpg){:width="30%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/12.jpg){:width="30%"}
+![](/img/1080411/11.jpg){:width="40%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/12.jpg){:width="40%"}
 
 Ｑ：如果用電子發票看得到消費明細嗎？<br>
 Ａ：可以的，只要到「我的發票」標籤頁中， 點擊該發票就可以看到消費明細囉
 
-![](/img/1080411/13.jpg){:width="30%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/14.jpg){:width="30%"}
+![](/img/1080411/13.jpg){:width="40%"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![](/img/1080411/14.jpg){:width="40%"}
 
 Ｑ：登錄電子發票還要自己對中獎號碼嗎？<br>
 Ａ：不用derrr～當每期發票號碼開獎後會自動對獎並兌獎！
