@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+
+  <title>如何在Node.js Express框架上設定Let's Encrypt憑證？</title>
+
+  <meta name="author" content="Jasmine Chang" />
+
+  
+  <meta name="description" content="讓你的Domain出現HTTPS小鎖頭安全連線吧！">
+  
+
+  <link rel="alternate" type="application/rss+xml" title="Jasmine's BLOG - Technology , ArtDesign , DailyLife !" href="/feed.xml" />
+
+  
+
+  
+
+  
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-138235409-1', 'auto');
+    ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="如何在Node.js Express框架上設定Let's Encrypt憑證？" />
+  
+
+   
+  <meta property="og:description" content="讓你的Domain出現HTTPS小鎖頭安全連線吧！">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://localhost:4000/2019-04-21-ssl-for-express/" />
+  <link rel="canonical" href="http://localhost:4000/2019-04-21-ssl-for-express/" />
+  
+
+  
+  <meta property="og:image" content="http://localhost:4000/img/profile.png" />
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="如何在Node.js Express框架上設定Let's Encrypt憑證？" />
+  
+
+  
+  <meta name="twitter:description" content="讓你的Domain出現HTTPS小鎖頭安全連線吧！">
+  
+
+  
+  <meta name="twitter:image" content="http://localhost:4000/img/profile.png" />
+  
+
+  
+
+  
+
+</head>
+
+  <link rel='shortcut icon' type='image/x-icon' href='/img/favicon.png' />
+  <body>
+
+    
+
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://localhost:4000">Jasmine's BLOG</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="https://jasminmin.com/tags/#">Tag Cloud</a>
+
+          </li>
+        
+        
+        
+          <li class="navlinks-container">
+            <a class="navlinks-parent" href="javascript:void(0)">References</a>
+            <div class="navlinks-children">
+              
+                
+                  
+
+
+
+
+
+
+<a href="http://deanattali.com/beautiful-jekyll/">Jekyll</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="https://technews.tw">TechNews</a>
+
+                
+              
+                
+                  
+
+
+
+
+
+
+<a href="https://www.ithome.com.tw">iThome</a>
+
+                
+              
+            </div>
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://localhost:4000">
+	      <img class="avatar-img" src="/img/profile.png" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>如何在Node.js Express框架上設定Let's Encrypt憑證？</h1>
+		  
+		    
+			<h2 class="post-subheading">讓你的Domain出現HTTPS小鎖頭安全連線吧！</h2>
+			
+		  
+		  
+		  
+		  <span class="post-meta">Posted on April 21, 2019</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      
+
+      <article role="main" class="blog-post">
+        <p>什麼是Express框架(ↂ_ↂ？<br /></p>
+<blockquote>
+  <p>Express 是目前最穩定、使用最廣泛開發框架，並且是<a href="https://nodejs.org/en/">Node.js官方</a>唯一推薦的Web開發框架。</p>
+</blockquote>
+
+<p>那什麼是Let’s Encrypt憑證呢？<br /></p>
+<blockquote>
+  <p><a href="https://letsencrypt.org">Let’s Encrypt</a>是一個於2015年三季度推出的數位憑證認證機構，旨在以自動化流程消除手動建立和安裝憑證的複雜流程，並推廣使全球資訊網伺服器的加密連接無所不在，為安全網站提供免費的SSL/TLS憑證。</p>
+</blockquote>
+
+<p>大家在利用Nginx+Express架站時，大家都如何設定SSL憑證呢？<br />
+Let’s setup <strong>Let’s Encrypt</strong> for our Express Sites!<br />
+以下將利用Cerbot憑證管理工具協助Express申請SSL憑證，步驟簡述：<br /></p>
+<ol>
+  <li>安裝Certbot憑證管理工具</li>
+  <li>藉由Certbot申請SSL憑證</li>
+  <li>Nginx伺服器設定檔編輯</li>
+  <li>防火牆設定</li>
+</ol>
+
+<h2 id="安裝certbot憑證管理工具">安裝Certbot憑證管理工具</h2>
+<p>如果是在 Red Hat/Fedora/CentOS 作業系統下指令使用<strong>yum</strong>，在 Debian/ubuntu 作業系統使用<strong>apt-get</strong>：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>yum install certbot
+</code></pre></div></div>
+<p>如果使用macOS需要使用certbot憑證管理工具，也可以輸入安裝：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install certbot
+</code></pre></div></div>
+<h2 id="藉由certbot申請ssl憑證">藉由Certbot申請SSL憑證</h2>
+<p>在申請憑證之前，大家記得先<a href="https://www.noip.com/">申請免費域名</a>或直接<a href="https://www.namecheap.com">購買域名</a><br />
+下指令時請使用root全線進行申請：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>certbot certonly <span class="nt">--manual</span>
+</code></pre></div></div>
+<p>接下來會詢問你的email：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Saving debug log to /var/log/letsencrypt/letsencrypt.log Plugins
+selected: Authenticator manual, Installer None Enter email address 
+<span class="o">(</span>used <span class="k">for </span>urgent renewal and security notices<span class="o">)</span> <span class="o">(</span>Enter <span class="s1">'c'</span> to 
+cancel<span class="o">)</span>:test@gmail.com 
+</code></pre></div></div>
+<p>詢問是否接受服務條款：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Please <span class="nb">read </span>the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf. 
+You must agree <span class="k">in </span>order to register with the ACME server at
+https://acme-v02.api.letsencrypt.org/directory
+<span class="o">(</span>A<span class="o">)</span>gree/<span class="o">(</span>C<span class="o">)</span>ancel: A
+</code></pre></div></div>
+<p>詢問是否分享郵箱給Electronic Fronitier基金會（這是開發Certbot的組織），作為分享近期組織活動的宣傳管道：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Would you be willing to share your email address with the Electronic Frontier
+Foundation, a founding partner of the Let's Encrypt project and the non-profit
+organization that develops Certbot? We'd like to send you email about our work
+encrypting the web, EFF news, campaigns, and ways to support digital freedom.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: Y
+</code></pre></div></div>
+<p>接下來輸入你所想要申請的域名：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Please enter <span class="k">in </span>your domain name<span class="o">(</span>s<span class="o">)</span> <span class="o">(</span>comma and/or space separated<span class="o">)</span>  <span class="o">(</span>Enter <span class="s1">'c'</span>
+to cancel<span class="o">)</span>: jasminmin.com
+</code></pre></div></div>
+<p>詢問IP是否可被記錄：<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Obtaining a new certificate
+Performing the following challenges:
+http-01 challenge for copesflavio.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NOTE: The IP of this machine will be publicly logged as having requested this
+certificate. If you're running certbot in manual mode on a machine that is not
+your server, please ensure you're okay with that.
+
+Are you OK with your IP being logged?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: y
+</code></pre></div></div>
+<p>依下列提示在web伺服器位置中建立「.well-known/acme-challenge」兩層資料夾並建立檔案與編輯檔案內容：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Create a file containing just this data:
+
+TS_oZ2-ji23jrio3<span class="k">*****</span>3iroj_U51u1o0x7rrDY2E.<span class="k">*****</span>_voCOsrpddP_2kpodd2opeko2pke-UAPk21sW1c
+
+And make it available on your web server at this URL:
+
+http://jasminmin.com/.well-known/acme-challenge/TS_oZ2-ji23jrio3j2irj3iroj_U51u1o0x7rrDY9A
+</code></pre></div></div>
+<p>完成檔案建立後可輸入網址檢視是否可被連結下載Ψ(｀▽´)Ψ<br />
+確認完畢按下<code class="highlighter-rouge">Enter</code>等待數秒憑證就建立完成囉！<br />
+大家要把憑證key放置的位置記錄下來，待會Nginx伺服器設定終將使用到：<br /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Waiting for verification...
+Resetting dropped connection: acme-v02.api.letsencrypt.org
+Cleaning up challenges
+Resetting dropped connection: acme-v02.api.letsencrypt.org
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/jasminmin.com/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/jasminmin.com/privkey.pem
+   Your cert will expire on 2019-10-31. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+</code></pre></div></div>
+<h2 id="nginx伺服器設定檔編輯">Nginx伺服器設定檔編輯</h2>
+<p>接下來設定Nginx伺服器中的設定檔，先安裝certbot-nginx套件：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>yum install certbot-nginx
+</code></pre></div></div>
+<p>完成後修改nginx.conf檔中<code class="highlighter-rouge">server name</code>為自己的域名：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>vi /etc/nginx/nginx.conf
+</code></pre></div></div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server<span class="o">{</span>
+    listen       80 default_server<span class="p">;</span>
+    listen       <span class="o">[</span>::]:80 default_server<span class="p">;</span>
+    server_name  jasminmin.com<span class="p">;</span>
+    ......
+<span class="o">}</span>
+</code></pre></div></div>
+<p>在Nginx伺服器中conf.d資料夾裡建立自訂名稱conf設定檔，conf.d資料夾為Nginx為開發者自定義設定檔放置位置：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>touch /etc/nginx/conf.d/setting.conf
+vim /etc/nginx/conf.d/setting.conf
+</code></pre></div></div>
+<p>檔案中輸入設定：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server <span class="o">{</span>
+  <span class="c"># 傾聽 HTTPS 標準埠號 443</span>
+  listen 443 ssl http2<span class="p">;</span>
+
+  <span class="c"># 同時啟用 IPv6 的 HTTPS 安全加密網頁</span>
+  listen <span class="o">[</span>::]:443<span class="p">;</span>
+
+  server_name sendtest.kerorotw.com<span class="p">;</span>
+
+  index index.php index.html index.htm<span class="p">;</span>
+
+location /api/ws <span class="o">{</span>
+	proxy_redirect off<span class="p">;</span>
+	proxy_pass http://0.0.0.0:1443<span class="p">;</span>
+	proxy_http_version 1.1<span class="p">;</span>
+	proxy_set_header Upgrade <span class="nv">$http_upgrade</span><span class="p">;</span>
+	proxy_set_header Connection <span class="s2">"upgrade"</span><span class="p">;</span>
+	proxy_set_header Host <span class="nv">$http_host</span><span class="p">;</span>
+<span class="o">}</span>
+
+
+location / <span class="o">{</span>
+	proxy_pass	http://0.0.0.0:1443<span class="p">;</span>
+	proxy_set_header	Host	<span class="nv">$host</span><span class="p">;</span>
+	proxy_set_header	X-Real-IP	<span class="nv">$remote_addr</span><span class="p">;</span>
+	proxy_set_header	X-Forwarded-For	<span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+<span class="o">}</span>
+	access_log off<span class="p">;</span>
+
+<span class="c"># 設定 SSL 憑證</span>
+	ssl_certificate /etc/letsencrypt/live/sendtest.kerorotw.com/fullchain.pem<span class="p">;</span>
+	ssl_certificate_key /etc/letsencrypt/live/sendtest.kerorotw.com/privkey.pem<span class="p">;</span>
+
+	ssl on<span class="p">;</span>
+	ssl_session_timeout 5m<span class="p">;</span>
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2<span class="p">;</span>
+	ssl_prefer_server_ciphers on<span class="p">;</span>
+	ssl_ciphers <span class="s2">"EECDH+CHACHA20:EECDH+CHACHA20-draft:EECDH+AES128:RSA+AES128:EECDH+AES256:RSA+AES256:EECDH+3DES:RSA+3DES:!MD5"</span><span class="p">;</span>
+	ssl_session_cache <span class="nb">builtin</span>:1000 shared:SSL:10m<span class="p">;</span>
+  
+<span class="o">}</span>
+</code></pre></div></div>
+<p>完成設定檔編輯後記得將Nginx伺服器重啟，不然以上就是白費工囉：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>nginx <span class="nt">-s</span> reload
+</code></pre></div></div>
+<h2 id="防火牆設定">防火牆設定</h2>
+<p>接下來進行防火牆設定，分別對udp及tcp都開啟443埠號：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall <span class="nt">-cmd</span> <span class="nt">--parmanent</span> <span class="nt">--add-port</span><span class="o">=</span>443/udp
+firewall <span class="nt">-cmd</span> <span class="nt">--parmanent</span> <span class="nt">--add-port</span><span class="o">=</span>443/tcp
+</code></pre></div></div>
+<p>設定完成會出現<code class="highlighter-rouge">success</code>，接下來重啟防火牆：<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>firewall <span class="nt">-cmd</span> <span class="nt">--reload</span>
+</code></pre></div></div>
+<p>這個時候可以嘗試在Domain前面加上https，如果連線成功就代表完成啦☆<em>ヾ(-∀・</em>)*+☆<br /></p>
+
+<hr />
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#tech">tech</a>
+          
+            <a href="/tags#node.js">node.js</a>
+          
+            <a href="/tags#SSL">SSL</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=%E5%A6%82%E4%BD%95%E5%9C%A8Node.js+Express%E6%A1%86%E6%9E%B6%E4%B8%8A%E8%A8%AD%E5%AE%9ALet%27s+Encrypt%E6%86%91%E8%AD%89%EF%BC%9F+http://localhost:4000/2019-04-21-ssl-for-express/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-04-21-ssl-for-express/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-04-21-ssl-for-express/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="/2019-04-16-markdown-record/" data-toggle="tooltip" data-placement="top" title="Markdown怎麼用？常見指令大集合">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'jasminmin';
+        /* ensure that pages with query string get the same discussion */
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </div>
+          
+        <div class="staticman-comments">
+          
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li><li><a href="mailto:jasminmin.chang@gmail.com" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li><li><a href="https://www.facebook.com/jasminmin.chang" title="Facebook"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li><li><a href="https://github.com/jasminmin" title="GitHub"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li><li><a href="https://www.instagram.com/youandme_handcraft" title="Instagram"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Instagram</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      Jasmine Chang
+      &nbsp;&bull;&nbsp;
+      2019
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://localhost:4000">jasminmin.com</a>
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="https://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+  
+  </body>
+</html>
