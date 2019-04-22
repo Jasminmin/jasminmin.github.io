@@ -15,6 +15,9 @@ baseurl: ""
 
 # Name of website
 title: Jasmine's BLOG
+SEOTitle: Jasmine's BLOG | 爵士米 | jasminmin
+email: jasminmin.chang@gmail.com
+keyword: "Jasmine's BLOG, 爵士米, jasminmin, SSL, tech, technology, art design, linux"
 
 # Short description of your site
 description: Technology , ArtDesign , DailyLife !

@@ -30,7 +30,7 @@ brew install certbot
 ```
 ## 藉由Certbot申請SSL憑證
 在申請憑證之前，大家記得先[申請免費域名](https://www.noip.com/)或直接[購買域名](https://www.namecheap.com)<br>
-下指令時請使用root全線進行申請：<br>
+下指令時請使用root權限進行申請：<br>
 ```shell
 sudo certbot certonly --manual
 ```
