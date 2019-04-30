@@ -4,6 +4,7 @@ title: 雲端發票怎麼用？申請教學及秘技解說
 subtitle: 一起節能減碳，無紙化發票吧！
 bigimg: /img/1080411/bg_earth.png
 tags: [lifetime]
+keywords : "雲端發票, 節能減碳, 電子發票" 
 ---
 
 台灣每年用紙量相當於**480萬棵樹**！！！<br>

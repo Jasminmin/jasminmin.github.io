@@ -14,6 +14,10 @@
   <meta name="description" content="讓你的Domain出現HTTPS小鎖頭安全連線吧！">
   
 
+  
+  <meta name="keywords" content="node.js, centOS, SLL, Let's Encrypt">
+  
+
   <link rel="alternate" type="application/rss+xml" title="Jasmine's BLOG - Technology , ArtDesign , DailyLife !" href="/feed.xml" />
 
   
@@ -79,7 +83,6 @@
    
   <meta property="og:description" content="讓你的Domain出現HTTPS小鎖頭安全連線吧！">
   
-
 
   <meta property="og:type" content="website" />
 
@@ -284,10 +287,10 @@
 Let’s setup <strong>Let’s Encrypt</strong> for our Express Sites!<br />
 以下將利用Cerbot憑證管理工具協助Express申請SSL憑證，步驟簡述：<br /></p>
 <ol>
-  <li>安裝Certbot憑證管理工具</li>
-  <li>藉由Certbot申請SSL憑證</li>
-  <li>Nginx伺服器設定檔編輯</li>
-  <li>防火牆設定</li>
+  <li><a href="#first">安裝Certbot憑證管理工具</a></li>
+  <li><a href="#second">藉由Certbot申請SSL憑證</a></li>
+  <li><a href="#third">Nginx伺服器設定檔編輯</a></li>
+  <li><a href="#forth">防火牆設定</a></li>
 </ol>
 
 <h2 id="安裝certbot憑證管理工具">安裝Certbot憑證管理工具</h2>
@@ -299,7 +302,7 @@ Let’s setup <strong>Let’s Encrypt</strong> for our Express Sites!<br />
 </code></pre></div></div>
 <h2 id="藉由certbot申請ssl憑證">藉由Certbot申請SSL憑證</h2>
 <p>在申請憑證之前，大家記得先<a href="https://www.noip.com/">申請免費域名</a>或直接<a href="https://www.namecheap.com">購買域名</a><br />
-下指令時請使用root全線進行申請：<br /></p>
+下指令時請使用root權限進行申請：<br /></p>
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>certbot certonly <span class="nt">--manual</span>
 </code></pre></div></div>
 <p>接下來會詢問你的email：<br /></p>
@@ -459,7 +462,9 @@ firewall <span class="nt">-cmd</span> <span class="nt">--parmanent</span> <span 
           
             <a href="/tags#node.js">node.js</a>
           
-            <a href="/tags#SSL">SSL</a>
+            <a href="/tags#centOS">centOS</a>
+          
+            <a href="/tags#web">web</a>
           
           
         </div>
@@ -515,6 +520,10 @@ firewall <span class="nt">-cmd</span> <span class="nt">--parmanent</span> <span 
           <a href="/2019-04-16-markdown-record/" data-toggle="tooltip" data-placement="top" title="Markdown怎麼用？常見指令大集合">&larr; Previous Post</a>
         </li>
         
+        
+        <li class="next">
+          <a href="/2019-04-30-who-is-websites/" data-toggle="tooltip" data-placement="top" title="如何查詢Domain?Whois網站推薦指南">Next Post &rarr;</a>
+        </li>
         
       </ul>
 

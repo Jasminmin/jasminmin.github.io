@@ -6,6 +6,7 @@ gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [tech, markdown]
 comments: true
+keywords : "markdown, jekyll, github" 
 ---
 
 Markdown是什麼呢 ( ・◇・)？<br>

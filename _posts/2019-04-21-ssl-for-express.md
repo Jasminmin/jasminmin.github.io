@@ -2,7 +2,8 @@
 layout: post
 title: 如何在Node.js Express框架上設定Let's Encrypt憑證？
 subtitle: 讓你的Domain出現HTTPS小鎖頭安全連線吧！
-tags: [tech, node.js, SSL]
+tags: [tech, node.js, centOS, web]
+keywords : "node.js, centOS, SLL, Let's Encrypt" 
 ---
 
 什麼是Express框架(ↂ_ↂ？<br>
@@ -14,10 +15,10 @@ tags: [tech, node.js, SSL]
 大家在利用Nginx+Express架站時，大家都如何設定SSL憑證呢？<br>
 Let's setup **Let's Encrypt** for our Express Sites!<br>
 以下將利用Cerbot憑證管理工具協助Express申請SSL憑證，步驟簡述：<br>
-1. 安裝Certbot憑證管理工具
-2. 藉由Certbot申請SSL憑證
-3. Nginx伺服器設定檔編輯
-4. 防火牆設定
+1. [安裝Certbot憑證管理工具](#first)
+2. [藉由Certbot申請SSL憑證](#second)
+3. [Nginx伺服器設定檔編輯](#third)
+4. [防火牆設定](#forth)
 
 ## 安裝Certbot憑證管理工具
 如果是在 Red Hat/Fedora/CentOS 作業系統下指令使用**yum**，在 Debian/ubuntu 作業系統使用**apt-get**：<br>
