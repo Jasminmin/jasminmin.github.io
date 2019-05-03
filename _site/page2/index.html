@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>Tag Cloud</title>
+  <title>Jasmine's BLOG - Technology , ArtDesign , DailyLife !</title>
 
   <meta name="author" content="Jasmine Chang" />
 
+  
+  <meta name="description" content="Technology , ArtDesign , DailyLife !">
   
 
   
@@ -73,18 +75,18 @@
   
 
   
-  <meta property="og:title" content="Tag Cloud" />
+  <meta property="og:title" content="Jasmine's BLOG" />
   
 
    
-  <meta property="og:description" content="{%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag in tags_list -%} &amp;nbsp;{{- tag -}}&amp;nbsp;({{site.tags[tag].size}}) {%- endfor -%} {%- for...">
+  <meta property="og:description" content="Technology , ArtDesign , DailyLife !">
   
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/tags/" />
-  <link rel="canonical" href="http://localhost:4000/tags/" />
+  <meta property="og:url" content="http://localhost:4000/page2/" />
+  <link rel="canonical" href="http://localhost:4000/page2/" />
   
 
   
@@ -98,11 +100,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="Tag Cloud" />
+  <meta name="twitter:title" content="Jasmine's BLOG" />
   
 
   
-  <meta name="twitter:description" content="{%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag in tags_list -%} &amp;nbsp;{{- tag -}}&amp;nbsp;({{site.tags[tag].size}}) {%- endfor -%} {%- for...">
+  <meta name="twitter:description" content="Technology , ArtDesign , DailyLife !">
   
 
   
@@ -241,7 +243,12 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-heading">
-          <h1>Tag Cloud</h1>
+          <h1>Jasmine's BLOG</h1>
+		  
+		    
+            <hr class="small">
+            <span class="page-subheading">Technology , ArtDesign , DailyLife !</span>
+			
 		  
 		  
 		  
@@ -259,104 +266,67 @@
 <div class="container" role="main">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <a href="#centOS" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;centOS&nbsp;(1)</a><a href="#lifetime" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;lifetime&nbsp;(2)</a><a href="#linux" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;linux&nbsp;(1)</a><a href="#markdown" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;markdown&nbsp;(1)</a><a href="#node.js" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;node.js&nbsp;(1)</a><a href="#tech" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;tech&nbsp;(4)</a><a href="#ubuntu" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;ubuntu&nbsp;(1)</a><a href="#web" class="btn btn-primary tag-btn"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;web&nbsp;(2)</a><div id="full-tags-list"><h2 id="centOS" class="linked-section">
-        <i class="fa fa-tag" aria-hidden="true"></i>
-        &nbsp;centOS&nbsp;(1)
-    </h2>
-    <div class="post-list"><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-21-ssl-for-express/">如何在Node.js Express框架上設定Let's Encrypt憑證？</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-21T00:00:00+00:00">April 21, 2019</time>
-                </div>
-            </div></div><h2 id="lifetime" class="linked-section">
-        <i class="fa fa-tag" aria-hidden="true"></i>
-        &nbsp;lifetime&nbsp;(2)
-    </h2>
-    <div class="post-list"><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-11-cloud-invoice/">雲端發票怎麼用？申請教學及秘技解說</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-11T00:00:00+00:00">April 11, 2019</time>
-                </div>
-            </div><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-03-first-post/">First post!</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-03T00:00:00+00:00">April 03, 2019</time>
-                </div>
-            </div></div><h2 id="linux" class="linked-section">
-        <i class="fa fa-tag" aria-hidden="true"></i>
-        &nbsp;linux&nbsp;(1)
-    </h2>
-    <div class="post-list"><div class="tag-entry">
-                <a href="http://localhost:4000/2019-05-03-ubuntu-commands/">Linux/Ubuntu系統目錄解析與Command指令全集</a>
-                <div class="entry-date">
-                    <time datetime="2019-05-03T00:00:00+00:00">May 03, 2019</time>
-                </div>
-            </div></div><h2 id="markdown" class="linked-section">
-        <i class="fa fa-tag" aria-hidden="true"></i>
-        &nbsp;markdown&nbsp;(1)
-    </h2>
-    <div class="post-list"><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-16-markdown-record/">Markdown怎麼用？常見指令大集合</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-16T00:00:00+00:00">April 16, 2019</time>
-                </div>
-            </div></div><h2 id="node.js" class="linked-section">
-        <i class="fa fa-tag" aria-hidden="true"></i>
-        &nbsp;node.js&nbsp;(1)
-    </h2>
-    <div class="post-list"><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-21-ssl-for-express/">如何在Node.js Express框架上設定Let's Encrypt憑證？</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-21T00:00:00+00:00">April 21, 2019</time>
-                </div>
-            </div></div><h2 id="tech" class="linked-section">
-        <i class="fa fa-tag" aria-hidden="true"></i>
-        &nbsp;tech&nbsp;(4)
-    </h2>
-    <div class="post-list"><div class="tag-entry">
-                <a href="http://localhost:4000/2019-05-03-ubuntu-commands/">Linux/Ubuntu系統目錄解析與Command指令全集</a>
-                <div class="entry-date">
-                    <time datetime="2019-05-03T00:00:00+00:00">May 03, 2019</time>
-                </div>
-            </div><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-30-who-is-websites/">如何查詢Domain?Whois網站推薦指南</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-30T00:00:00+00:00">April 30, 2019</time>
-                </div>
-            </div><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-21-ssl-for-express/">如何在Node.js Express框架上設定Let's Encrypt憑證？</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-21T00:00:00+00:00">April 21, 2019</time>
-                </div>
-            </div><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-16-markdown-record/">Markdown怎麼用？常見指令大集合</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-16T00:00:00+00:00">April 16, 2019</time>
-                </div>
-            </div></div><h2 id="ubuntu" class="linked-section">
-        <i class="fa fa-tag" aria-hidden="true"></i>
-        &nbsp;ubuntu&nbsp;(1)
-    </h2>
-    <div class="post-list"><div class="tag-entry">
-                <a href="http://localhost:4000/2019-05-03-ubuntu-commands/">Linux/Ubuntu系統目錄解析與Command指令全集</a>
-                <div class="entry-date">
-                    <time datetime="2019-05-03T00:00:00+00:00">May 03, 2019</time>
-                </div>
-            </div></div><h2 id="web" class="linked-section">
-        <i class="fa fa-tag" aria-hidden="true"></i>
-        &nbsp;web&nbsp;(2)
-    </h2>
-    <div class="post-list"><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-30-who-is-websites/">如何查詢Domain?Whois網站推薦指南</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-30T00:00:00+00:00">April 30, 2019</time>
-                </div>
-            </div><div class="tag-entry">
-                <a href="http://localhost:4000/2019-04-21-ssl-for-express/">如何在Node.js Express框架上設定Let's Encrypt憑證？</a>
-                <div class="entry-date">
-                    <time datetime="2019-04-21T00:00:00+00:00">April 21, 2019</time>
-                </div>
-            </div></div></div>
+      <div class="posts-list">
+  
+  <article class="post-preview">
+    <a href="/2019-04-03-first-post/">
+	  <h2 class="post-title">First post!</h2>
+
+	  
+	  <h3 class="post-subtitle">
+	    歡迎來到爵士米的部落格
+	  </h3>
+	  
+    </a>
+
+    <p class="post-meta">
+      Posted on April 3, 2019
+    </p>
+
+    <div class="post-entry-container">
+      
+      <div class="post-image">
+        <a href="/2019-04-03-first-post/">
+          <img src="/img/1080403/post_1.png">
+        </a>
+      </div>
+      
+      <div class="post-entry">
+        This is my first post, how exciting!
+
+
+        
+        
+          <a href="/2019-04-03-first-post/" class="post-read-more">[Read&nbsp;More]</a>
+        
+      </div>
+    </div>
+
+    
+    <div class="blog-tags">
+      Tags:
+      
+      
+      <a href="/tags#lifetime">lifetime</a>
+      
+      
+    </div>
+    
+
+   </article>
+  
+</div>
+
+
+<ul class="pager main-pager">
+  
+  <li class="previous">
+    <a href="/">&larr; Newer Posts</a>
+  </li>
+  
+  
+</ul>
+
 
 	    
     </div>

@@ -7,6 +7,17 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Linux/Ubuntu系統目錄解析與Command指令全集</title>
+        <description>
+          如何查找檔案？防火牆怎麼開？檔案權限怎麼設定？ - 
+          什麼是Linux?什麼是Ubuntu? 第一次接觸這兩個名詞的人一定會覺得疑惑，這到底是什麼呢(●Ω●;) 其實簡單來說，就是類Unix的 「作業系統」 更簡單的說，我們最常用的作業系統是Windows或macOS 而Linux跟Ubuntu就是可以運行電腦應用程式的作業系統環境喔！ 身為小小小RD的我，就來介紹一下這個作業系統的目錄及常用Command吧（人･ω･) 本次介紹將分為： 系統檔案目錄 | 基本指令 | 使用者管理 | 檔案控制 | 檔案查找 | 防火牆設定 | 網路設定 系統檔案目錄 Linux作業系統應符合FHS檔案系統階層標準，每個資料夾也有相對應的目的與功能。 目錄 說明 / 第一層根目錄。 /root 系統管理員的家目錄，僅有root權限可讀寫。 /boot 放置Linux系統啟動過程中需要的文件，例如：kernal、引導程序Grub等。 /bin binary，存放供所有用戶使用的完成基本維護任務的命令，例如：cat、ls、cp等。 /sbin 存放系統管理員可使用的文件，例如：mkdir、ifconfig、reboot等。 /dev device，存放系統設備文件，例如：硬碟驅動、鍵盤、滑鼠等。 /etc etcetera，存放系統主要配置文件及應用軟體設定檔。 /home 用戶的家目錄，儲存普通用戶個人文件，默認為/home/USERNAME。 /lib 存放系統函示庫及核心函式庫。 /opt optional，第三方軟體放置處，例如：Adobe Reader、google-earth等。 /srv service，網路服務啟動後所需數據存放處，例如：網站服務www。 /tmp temperary，暫存檔存放處。...
+        </description>
+        <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/2019-05-03-ubuntu-commands/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-05-03-ubuntu-commands/</guid>
+      </item>
+    
+      <item>
         <title>如何查詢Domain?Whois網站推薦指南</title>
         <description>
           UR?IP?Domain?一起檢視連線網站的來源吧 - 
