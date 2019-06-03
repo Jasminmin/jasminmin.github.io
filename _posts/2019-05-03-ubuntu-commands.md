@@ -13,7 +13,7 @@ keywords : "ubuntu, linux, command, 指令, 查找檔案, 防火牆, 檔案權�
 而Linux跟Ubuntu就是可以運行電腦應用程式的作業系統環境喔！<br>
 身為小小小RD的我，就來介紹一下這個作業系統的目錄及常用[Command](https://zh.wikipedia.org/wiki/命令提示字元)吧（人･ω･)<br>
 本次介紹將分為：<br>
-[系統檔案目錄](#FHS) | [基本指令](#basic) | [使用者管理](#user) | [檔案控制](#file) | [檔案查找](#find) | [防火牆設定](#firewall) | [網路設定](#network)
+[系統檔案目錄](#系統檔案目錄) | [基本指令](#基本指令) | [使用者管理](#使用者管理) | [檔案控制](#檔案控制) | [檔案查找](#檔案查找) | [防火牆設定](#防火牆設定) | [網路設定](#網路設定)
 
 ### 系統檔案目錄
 
@@ -187,6 +187,16 @@ $ file README.md
 README.md: HTML document text, UTF-8 Unicode text
 ```
 
+* head/tail：檢查檔案前幾行/後幾行。
+
+```shell
+// head FILENAME，檢查檔案前幾行
+$ head README.md
+
+// tail FILENAME，檢查檔案後幾行
+$ tail README.md
+```
+
 ### 檔案查找
 
 * find：查找檔案。<br>
@@ -335,7 +345,6 @@ PING www.google.com (172.217.27.132): 56 data bytes
 4 packets transmitted, 4 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 4.937/5.599/6.251/0.364 ms
 ```
-
 
 
 參考資料：[TechBridge 技術共筆部落格](https://blog.techbridge.cc/2017/12/23/linux-commnd-line-tutorial/)、[每日頭條](https://kknews.cc/other/bj9n9vm.html)、[camel's blog](https://blog.camel2243.com/2016/09/21/linux-find-指令，搜尋檔案資料夾名稱與全文搜尋/)、[Github/jaywcjlove](https://github.com/jaywcjlove/linux-command)

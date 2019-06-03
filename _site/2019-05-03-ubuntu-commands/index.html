@@ -280,7 +280,7 @@
 而Linux跟Ubuntu就是可以運行電腦應用程式的作業系統環境喔！<br />
 身為小小小RD的我，就來介紹一下這個作業系統的目錄及常用<a href="https://zh.wikipedia.org/wiki/命令提示字元">Command</a>吧（人･ω･)<br />
 本次介紹將分為：<br />
-<a href="#FHS">系統檔案目錄</a> | <a href="#basic">基本指令</a> | <a href="#user">使用者管理</a> | <a href="#file">檔案控制</a> | <a href="#find">檔案查找</a> | <a href="#firewall">防火牆設定</a> | <a href="#network">網路設定</a></p>
+<a href="#系統檔案目錄">系統檔案目錄</a> | <a href="#基本指令">基本指令</a> | <a href="#使用者管理">使用者管理</a> | <a href="#檔案控制">檔案控制</a> | <a href="#檔案查找">檔案查找</a> | <a href="#防火牆設定">防火牆設定</a> | <a href="#網路設定">網路設定</a></p>
 
 <h3 id="系統檔案目錄">系統檔案目錄</h3>
 
@@ -522,6 +522,17 @@
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// file FILENAME，檢查指定檔案
 <span class="nv">$ </span>file README.md
 README.md: HTML document text, UTF-8 Unicode text
+</code></pre></div></div>
+
+<ul>
+  <li>head/tail：檢查檔案前幾行/後幾行。</li>
+</ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// head FILENAME，檢查檔案前幾行
+<span class="nv">$ </span>head README.md
+
+// tail FILENAME，檢查檔案後幾行
+<span class="nv">$ </span>tail README.md
 </code></pre></div></div>
 
 <h3 id="檔案查找">檔案查找</h3>
