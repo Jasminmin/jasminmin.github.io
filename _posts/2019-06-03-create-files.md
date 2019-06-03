@@ -8,7 +8,7 @@ keywords : "windows, mac, ubuntu, 空白檔案, 指定大小, 檔案建立, fall
 
 工具測試時需要各式大小的檔案，熊熊ʕ◉ᴥ◉ʔ找不到嗎？<br>
 對！我就是那個不想隨便拿一個檔案測試的傢伙<br>
-那就看看在[Windows](#Windows)、[Mac](#Mac)或[Ubuntu](#Ubuntu)上如何建立指定大小的空白檔案吧～<br>
+那就看看在[Windows](#windows)、[Mac](#mac)或[Ubuntu](#ubuntu)上如何建立指定大小的空白檔案吧～<br>
 
 ##  <font color="#6495ED">Windows</font>
 
