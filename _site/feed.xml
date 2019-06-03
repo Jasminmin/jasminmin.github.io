@@ -7,6 +7,17 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>如何在Windows、Mac或Linux上快速建立指定大小檔案?</title>
+        <description>
+          各式作業系統中一行指令搞定空白檔案建立 - 
+          工具測試時需要各式大小的檔案，熊熊ʕ◉ᴥ◉ʔ找不到嗎？ 對！我就是那個不想隨便拿一個檔案測試的傢伙 那就看看在Windows、Mac或Ubuntu上如何建立指定大小的空白檔案吧～ Windows Step1 開啟CMD 快速開啟命令提示字元，輸入Windows鍵及cmd並按下Enter Step2 前往檔案產生位置 輸入cd &amp;lt;directory&amp;gt;，前往欲產生檔案的位置，以下路徑前往桌面 Step3 建立檔案 輸入fsutil指令建立指定大小檔案，其中檔案大小單位為kilo-byte 1KB：1 X 1024 = 1024 1MB：1 X 1024 X 1024 = 1048576 1GB：1 X 1024 X 1024 X 1024 ＝ 1073741824 fsutile file createnew &amp;lt;file_name&amp;gt; &amp;lt;file_size_in_kBs&amp;gt; 以下範例為「在桌面建立名為TEST的1GB大小檔案」 Mac Step1 開啟CMD Mac開啟CMD後預設位置在Home底下，可自行更改檔案位置 Step2 建立檔案 輸入mkfile指令建立指定大小檔案 mkfile [-n]...
+        </description>
+        <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/2019-06-03-create-files/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-06-03-create-files/</guid>
+      </item>
+    
+      <item>
         <title>思科CCNA協定辭海</title>
         <description>
           ARP?ICMP?TTL?快速查找協定名稱與名詞解釋 - 

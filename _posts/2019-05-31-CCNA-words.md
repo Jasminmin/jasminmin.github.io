@@ -44,11 +44,11 @@ keywords : "CCNA, 思科, 名詞解釋, 協定解釋"
 
 * TCP：傳輸控制協定(Transmission Control Protocol)，一種連接導向的、可靠的、基於位元組流的傳輸層通訊協定，包含連接建立(connection establishment)、資料傳送(data transfer)和連接終止(connection termination)三階段。
 
-* UDP：使用者資料流協定(User Datagram Protocol)，
+* UDP：使用者資料流協定(User Datagram Protocol)，只提供資料的不可靠傳遞，一旦把應用程式發給網路層的資料傳送出去，就不保留資料備份，沒有連線要求、連線終止、以及流量控制的管理程序。
 
 ### 應用層協定與名詞解釋
 
-* HTTP：超文本傳輸協定(HyperText Transfer Protocol)，一個用戶端和伺服器端之間請求和應答的標準，通常使用TCP協定，透過使用網頁瀏覽器、網路爬蟲或者其它的工具，用戶端發起一個HTTP請求到伺服器上指定埠（預設埠為80）。
+* HTTP：超文本傳輸協定(HyperText Transfer Protocol)，一個用戶端和伺服器端之間請求和應答的標準，通常使用TCP協定，透過使用網頁瀏覽器、網路爬蟲或者其它的工具，用戶端發起一個HTTP請求到伺服器上指定埠(預設埠為80)。
 
 * FTP：檔案傳輸協定(File Transfer Protocol)，一個用於在電腦網路上在用戶端和伺服器之間進行檔案傳輸的應用層協定。
 

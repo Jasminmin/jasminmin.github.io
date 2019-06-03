@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>思科CCNA協定辭海</title>
+  <title>如何在Windows、Mac或Linux上快速建立指定大小檔案?</title>
 
   <meta name="author" content="Jasmine Chang" />
 
   
-  <meta name="description" content="ARP?ICMP?TTL?快速查找協定名稱與名詞解釋">
+  <meta name="description" content="各式作業系統中一行指令搞定空白檔案建立">
   
 
   
-  <meta name="keywords" content="CCNA, 思科, 名詞解釋, 協定解釋">
+  <meta name="keywords" content="windows, mac, ubuntu, 空白檔案, 指定大小, 檔案建立, fallocate, mkfile, fsutil">
   
 
   <link rel="alternate" type="application/rss+xml" title="Jasmine's BLOG - Technology , ArtDesign , DailyLife !" href="/feed.xml" />
@@ -77,18 +77,18 @@
   
 
   
-  <meta property="og:title" content="思科CCNA協定辭海" />
+  <meta property="og:title" content="如何在Windows、Mac或Linux上快速建立指定大小檔案?" />
   
 
    
-  <meta property="og:description" content="ARP?ICMP?TTL?快速查找協定名稱與名詞解釋">
+  <meta property="og:description" content="各式作業系統中一行指令搞定空白檔案建立">
   
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/2019-05-31-CCNA-words/" />
-  <link rel="canonical" href="http://localhost:4000/2019-05-31-CCNA-words/" />
+  <meta property="og:url" content="http://localhost:4000/2019-06-03-create-files/" />
+  <link rel="canonical" href="http://localhost:4000/2019-06-03-create-files/" />
   
 
   
@@ -102,11 +102,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="思科CCNA協定辭海" />
+  <meta name="twitter:title" content="如何在Windows、Mac或Linux上快速建立指定大小檔案?" />
   
 
   
-  <meta name="twitter:description" content="ARP?ICMP?TTL?快速查找協定名稱與名詞解釋">
+  <meta name="twitter:description" content="各式作業系統中一行指令搞定空白檔案建立">
   
 
   
@@ -245,15 +245,15 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>思科CCNA協定辭海</h1>
+          <h1>如何在Windows、Mac或Linux上快速建立指定大小檔案?</h1>
 		  
 		    
-			<h2 class="post-subheading">ARP?ICMP?TTL?快速查找協定名稱與名詞解釋</h2>
+			<h2 class="post-subheading">各式作業系統中一行指令搞定空白檔案建立</h2>
 			
 		  
 		  
 		  
-		  <span class="post-meta">Posted on May 31, 2019</span>
+		  <span class="post-meta">Posted on June 3, 2019</span>
 		  
         </div>
       </div>
@@ -273,125 +273,75 @@
       
 
       <article role="main" class="blog-post">
-        <p>爵士米最近上了CCNA的課程，發現第一步最重要的是把「名詞解釋」搞清楚！<br />
-所以依照網路模型做分類，針對各層中的協定與名詞作基本解釋<br />
-這時候大家要快速查找名詞定義就方便多囉٩(●˙▿˙●)۶…⋆ฺ<br /></p>
+        <p>工具測試時需要各式大小的檔案，熊熊ʕ◉ᴥ◉ʔ找不到嗎？<br />
+對！我就是那個不想隨便拿一個檔案測試的傢伙<br />
+那就看看在<a href="#Windows">Windows</a>、<a href="#Mac">Mac</a>或<a href="#Ubuntu">Ubuntu</a>上如何建立指定大小的空白檔案吧～<br /></p>
 
-<h3 id="鏈結層協定與名詞解釋">鏈結層協定與名詞解釋</h3>
+<h2 id="windows"><font color="#6495ED">Windows</font></h2>
 
-<ul>
-  <li>
-    <p>Ethernet：乙太網路，IEEE組織的IEEE 802.3標準制定了乙太網路的技術標準，規定包括實體層的連線、電子訊號和媒介存取層協定的內容。</p>
-  </li>
-  <li>
-    <p>PPP：點對點協定(Point-to-Point Protocol)，用於兩節點間建立直接的連接，並可以提供連接認證、傳輸加密（使用ECP，RFC 1968）以及壓縮。</p>
-  </li>
-  <li>
-    <p>HDLC：高級數據鏈路控制(High-Level Data Link Control)，Cisco設備預設所使用的封裝協定，該協定不依賴於任何一種字元編碼集，「0比特插入法」易於硬體實現，全雙工通信方式，有較高的數據鏈路傳輸效率。</p>
-  </li>
-  <li>
-    <p>Frame Relay：訊框中繼，一種有效的資料傳輸技術，它可以在一對一或者一對多的應用中快速而低廉的傳輸數位資訊。</p>
-  </li>
-  <li>
-    <p>MAC Address：媒體存取控制位址(Media Access Control Address)，也稱為區域網路位址（LAN Address），乙太網路位址（Ethernet Address）或實體位址（Physical Address），它是一個用來確認網路裝置位置的位址。</p>
-  </li>
-  <li>
-    <p>CSMA/CD：載波偵測多重存取/碰撞偵測(Carrier Sense Multiple Access with Collision Detection)，當節點要發送訊號時，會先偵測通道是否有其他節點正在使用，當通道沒有被其他節點使用時立即傳送封包，封包傳送後檢查是否發生碰撞，若發生碰撞則對通道發出高頻訊號高知其他節點已經發生碰撞，碰撞後隨機等待一段時間重新發送封包。</p>
-  </li>
-  <li>
-    <p>MPLS：多協定標簽交換(Multi-Protocol Label Switching)，一種在開放的網際網路上利用標籤啟動資料高速、高效傳輸的新技術，多協定的意涵是指MPLS不但可以支援多種網路層層面上的協定，還可以相容第二層的多種資料鏈路層技術。</p>
-  </li>
-</ul>
+<h3 id="step1-開啟cmd">Step1 開啟CMD</h3>
 
-<h3 id="網際網路層協定與名詞解釋">網際網路層協定與名詞解釋</h3>
+<p>快速開啟命令提示字元，輸入<code class="highlighter-rouge">Windows鍵</code>及<code class="highlighter-rouge">cmd</code>並按下<code class="highlighter-rouge">Enter</code><br /></p>
 
-<ul>
-  <li>
-    <p>IP：網際網路協定(Internet Protocaol)，根據來源主機與目的主機的位址傳送封包進行資料交換。</p>
-  </li>
-  <li>
-    <p>IP定址：識別網路中的每個設備。</p>
-  </li>
-  <li>
-    <p>IP路由：提供設備之間轉送IP封包的服務。</p>
-  </li>
-  <li>
-    <p>APR：位址解析協定(Address Resolution Protocol)，透過解析網路層位址(IP)來找尋資料鏈結層位址(MAC)的網路傳輸協定。</p>
-  </li>
-  <li>
-    <p>ICMP：網際網路控制訊息協定(Internet Control Message Protocol)，解析網路封包或是分析路由的情況，於網際網路協定(IP)中傳送控制訊息。</p>
-  </li>
-  <li>
-    <p>RIP：路由訊息協定(Routing Information Protocol)以路由跳數作為計數單位的路由協議，適用於比較小型的網絡環境。</p>
-  </li>
-</ul>
+<p><img src="/img/1080603/w-1.png" alt="w-1" /></p>
 
-<h3 id="傳輸層協定與名詞解釋">傳輸層協定與名詞解釋</h3>
+<h3 id="step2-前往檔案產生位置">Step2 前往檔案產生位置</h3>
 
-<ul>
-  <li>
-    <p>TCP：傳輸控制協定(Transmission Control Protocol)，一種連接導向的、可靠的、基於位元組流的傳輸層通訊協定，包含連接建立(connection establishment)、資料傳送(data transfer)和連接終止(connection termination)三階段。</p>
-  </li>
-  <li>
-    <p>UDP：使用者資料流協定(User Datagram Protocol)，只提供資料的不可靠傳遞，一旦把應用程式發給網路層的資料傳送出去，就不保留資料備份，沒有連線要求、連線終止、以及流量控制的管理程序。</p>
-  </li>
-</ul>
+<p>輸入<code class="highlighter-rouge">cd &lt;directory&gt;</code>，前往欲產生檔案的位置，以下路徑前往桌面<br /></p>
 
-<h3 id="應用層協定與名詞解釋">應用層協定與名詞解釋</h3>
+<p><img src="/img/1080603/w-2.png" alt="w-2" /></p>
 
-<ul>
-  <li>
-    <p>HTTP：超文本傳輸協定(HyperText Transfer Protocol)，一個用戶端和伺服器端之間請求和應答的標準，通常使用TCP協定，透過使用網頁瀏覽器、網路爬蟲或者其它的工具，用戶端發起一個HTTP請求到伺服器上指定埠(預設埠為80)。</p>
-  </li>
-  <li>
-    <p>FTP：檔案傳輸協定(File Transfer Protocol)，一個用於在電腦網路上在用戶端和伺服器之間進行檔案傳輸的應用層協定。</p>
-  </li>
-  <li>
-    <p>SMTP：簡單郵件傳輸協定(Simple Mail Transfer Protocol)，基於文字在網際網路上傳送電子郵件的標準。</p>
-  </li>
-  <li>
-    <p>DNS：網域名稱系統(Domain Name System)，作為將域名和IP位址相互對映的一個分散式資料庫，能夠使人更方便地存取網際網路。</p>
-  </li>
-  <li>
-    <p>POP3：郵局協定(Post Office Protocol)，用於支援使用用戶端遠端管理在伺服器上的電子郵件。</p>
-  </li>
-</ul>
+<h3 id="step3-建立檔案">Step3 建立檔案</h3>
 
-<h3 id="其他名詞解釋">其他名詞解釋</h3>
+<p>輸入<code class="highlighter-rouge">fsutil</code>指令建立指定大小檔案，其中檔案大小單位為<strong>kilo-byte</strong><br />
+1KB：1 X 1024 = 1024<br />
+1MB：1 X 1024 X 1024 = 1048576<br />
+1GB：1 X 1024 X 1024 X 1024 ＝ 1073741824<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fsutile file createnew &lt;file_name&gt; &lt;file_size_in_kBs&gt;
+</code></pre></div></div>
+<p>以下範例為「在桌面建立名為<strong>TEST</strong>的1GB大小檔案」<br /></p>
 
-<ul>
-  <li>
-    <p>OSI模型：開放式系統互連通訊參考模型(Open System Interconnection Reference Model)，一種概念模型，由國際標準化組織提出，一個試圖使各種電腦在世界範圍內互連為網路的標準框架，定義於ISO/IEC 7498-1。</p>
-  </li>
-  <li>
-    <p>IPS模型：網際網路協議(Internet Protocol Suite)，是一個網路通訊模型，以及一整個網路傳輸協定家族，為網際網路的基礎通訊架構，被通稱為TCP/IP協定套組。</p>
-  </li>
-</ul>
+<p><img src="/img/1080603/w-3.png" alt="w-3" /></p>
 
-<p><img src="/img/1080531/OSI.png" alt="OSI" width="80%" /><br />
-▲ OSI與TCP/IP綜合比較圖</p>
+<h2 id="mac"><font color="#6495ED">Mac</font></h2>
 
-<ul>
-  <li>
-    <p>Telnet：使用於network及LAN中，以虛擬終端機形式提供雙向的文字Command。</p>
-  </li>
-  <li>
-    <p>CPE：客戶端設備(Customer Premises Equipment)。</p>
-  </li>
-  <li>
-    <p>CSU/DSU：通道服務單元/資料服務單元(Channel Service Unit/Data Service Unit)，是用戶端(User End)與電信局局端(Central Office)間E1/T1線路傳輸的數位式數據機，也是WAN與LAN間的基礎介質，具有傳輸語音、數據和影像的功能，CSU/DSU通常合併放在一個硬體中連結在一起使用。</p>
-  </li>
-  <li>
-    <p>ISP：網際網路服務供應商(Internet service Provider)。</p>
-  </li>
-  <li>
-    <p>TTL：存活時間(Time To Life)，一個封包在經過一個路由器時，可傳遞的最長距離(躍點數)。</p>
-  </li>
-</ul>
+<h3 id="step1-開啟cmd-1">Step1 開啟CMD</h3>
+
+<p>Mac開啟CMD後預設位置在Home底下，可自行更改檔案位置<br /></p>
+
+<p><img src="/img/1080603/m-1.png" alt="m-1" /></p>
+
+<h3 id="step2-建立檔案">Step2 建立檔案</h3>
+
+<p>輸入<code class="highlighter-rouge">mkfile</code>指令建立指定大小檔案<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfile <span class="o">[</span><span class="nt">-n</span><span class="o">]</span> size[b|k|m|g] filename
+</code></pre></div></div>
+<p>可直接輸入檔案大小，[b|k|m|g]代表Byte、KB、MB、GB<br />
+以下範例為「在Home目錄底下建立名為<strong>Mac_Test</strong>的1KB大小檔案」<br /></p>
+
+<p><img src="/img/1080603/m-2.png" alt="m-2" /></p>
+
+<h2 id="ubuntu"><font color="#6495ED">Ubuntu</font></h2>
+
+<h3 id="step1-開啟cmd-2">Step1 開啟CMD</h3>
+
+<p>這個範例的作業系統是以遠端連線進入，大家在本機可以直接開啟CMD<br />
+完成連線後輸入<code class="highlighter-rouge">cd home</code>進入home目錄底下<br /></p>
+
+<p><img src="/img/1080603/u-1.png" alt="u-1" /></p>
+
+<h3 id="step2-建立檔案-1">Step2 建立檔案</h3>
+
+<p>輸入<code class="highlighter-rouge">fallocate</code>指令建立指定大小檔案<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fallocate <span class="nt">-l</span> &lt;file_size&gt; &lt;file_name&gt;
+</code></pre></div></div>
+<p>以下範例為「在Home目錄底下建立名為<strong>Ubuntu_Test</strong>的4GB大小檔案」<br /></p>
+
+<p><img src="/img/1080603/u-2.png" alt="u-2" /></p>
 
 <hr />
 
-<p>參考資料：<a href="https://zh.wikipedia.org/wiki">維基百科</a></p>
+<p>以上，大家可以在各作業系統底下建立指定大小檔案啦 ༼ つ◕(oo)◕༽つ<br /></p>
 
       </article>
 
@@ -402,7 +352,11 @@
           
             <a href="/tags#tech">tech</a>
           
-            <a href="/tags#CCNA">CCNA</a>
+            <a href="/tags#Windows">Windows</a>
+          
+            <a href="/tags#Mac">Mac</a>
+          
+            <a href="/tags#Ubuntu">Ubuntu</a>
           
           
         </div>
@@ -419,7 +373,7 @@
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=%E6%80%9D%E7%A7%91CCNA%E5%8D%94%E5%AE%9A%E8%BE%AD%E6%B5%B7+http://localhost:4000/2019-05-31-CCNA-words/"
+    <a href="https://twitter.com/intent/tweet?text=%E5%A6%82%E4%BD%95%E5%9C%A8Windows%E3%80%81Mac%E6%88%96Linux%E4%B8%8A%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%8B%E6%8C%87%E5%AE%9A%E5%A4%A7%E5%B0%8F%E6%AA%94%E6%A1%88%3F+http://localhost:4000/2019-06-03-create-files/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -428,7 +382,7 @@
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-05-31-CCNA-words/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-06-03-create-files/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -439,7 +393,7 @@
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-05-31-CCNA-words/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-06-03-create-files/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -455,13 +409,9 @@
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="/2019-05-03-ubuntu-commands/" data-toggle="tooltip" data-placement="top" title="Linux/Ubuntu系統目錄解析與Command指令全集">&larr; Previous Post</a>
+          <a href="/2019-05-31-CCNA-words/" data-toggle="tooltip" data-placement="top" title="思科CCNA協定辭海">&larr; Previous Post</a>
         </li>
         
-        
-        <li class="next">
-          <a href="/2019-06-03-create-files/" data-toggle="tooltip" data-placement="top" title="如何在Windows、Mac或Linux上快速建立指定大小檔案?">Next Post &rarr;</a>
-        </li>
         
       </ul>
 
