@@ -22,7 +22,7 @@ keywords : "windows, mac, ubuntu, 空白檔案, 指定大小, 檔案建立, fall
 
 輸入`cd <directory>`，前往欲產生檔案的位置，以下路徑前往桌面<br>
 
-![w-2](/img/1080603/w-2.png)
+![w-2](/img/1080603/w-2.PNG)
 
 ### Step3 建立檔案
 
@@ -35,7 +35,7 @@ fsutile file createnew <file_name> <file_size_in_kBs>
 ```
 以下範例為「在桌面建立名為**TEST**的1GB大小檔案」<br>
 
-![w-3](/img/1080603/w-3.png)
+![w-3](/img/1080603/w-3.PNG)
 
 ##  <font color="#6495ED">Mac</font>
 
