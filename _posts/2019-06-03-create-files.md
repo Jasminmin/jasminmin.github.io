@@ -2,7 +2,7 @@
 layout: post
 title: 如何在Windows、Mac或Linux上快速建立指定大小檔案?
 subtitle: 各式作業系統中一行指令搞定空白檔案建立
-tags: [tech, Windows, Mac, Ubuntu]
+tags: [tech, windows, mac, ubuntu]
 keywords : "windows, mac, ubuntu, 空白檔案, 指定大小, 檔案建立, fallocate, mkfile, fsutil" 
 ---
 
