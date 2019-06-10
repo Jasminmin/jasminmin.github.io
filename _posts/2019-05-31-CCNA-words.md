@@ -26,6 +26,8 @@ keywords : "CCNA, 思科, 名詞解釋, 協定解釋"
 
 * MPLS：多協定標簽交換(Multi-Protocol Label Switching)，一種在開放的網際網路上利用標籤啟動資料高速、高效傳輸的新技術，多協定的意涵是指MPLS不但可以支援多種網路層層面上的協定，還可以相容第二層的多種資料鏈路層技術。
 
+* STP：擴展樹協定(Spanning Tree Protocol)，該協定可封鎖某些埠，只讓任何一對LAN的區段之間(Collision domain)存在一條有效路徑。
+
 ### 網際網路層協定與名詞解釋
 
 * IP：網際網路協定(Internet Protocaol)，根據來源主機與目的主機的位址傳送封包進行資料交換。
@@ -34,7 +36,7 @@ keywords : "CCNA, 思科, 名詞解釋, 協定解釋"
 
 * IP路由：提供設備之間轉送IP封包的服務。
 
-* APR：位址解析協定(Address Resolution Protocol)，透過解析網路層位址(IP)來找尋資料鏈結層位址(MAC)的網路傳輸協定。
+* ARP：位址解析協定(Address Resolution Protocol)，透過解析網路層位址(IP)來找尋資料鏈結層位址(MAC)的網路傳輸協定。
 
 * ICMP：網際網路控制訊息協定(Internet Control Message Protocol)，解析網路封包或是分析路由的情況，於網際網路協定(IP)中傳送控制訊息。
 
@@ -54,11 +56,34 @@ keywords : "CCNA, 思科, 名詞解釋, 協定解釋"
 
 * SMTP：簡單郵件傳輸協定(Simple Mail Transfer Protocol)，基於文字在網際網路上傳送電子郵件的標準。
 
+* SNMP：簡單網路管理協定(Simple Network Management Protocol)，支援網路管理系統，用以監測連接到網路上的裝置是否有任何引起管理上關注的情況。
+
 * DNS：網域名稱系統(Domain Name System)，作為將域名和IP位址相互對映的一個分散式資料庫，能夠使人更方便地存取網際網路。
 
 * POP3：郵局協定(Post Office Protocol)，用於支援使用用戶端遠端管理在伺服器上的電子郵件。
 
+| Port | Protocol | Application |
+| :------ |:--- | :--- |
+| 20 | TCP | FTP Data |
+| 21 | TCP | FTP Control |
+| 22 | TCP | SSH |
+| 23 | TCP | Telnet |
+| 25 | TCP | SMTP |
+| 53 | TCP,UDP | DNS |
+| 67 | UDP | DHCP Server |
+| 68 | UDP | DHCP Client |
+| 69 | TCP | TFTP |
+| 80 | TCP | HTTP |
+| 110 | TCP | POP3 |
+| 161 | TCP | SNMP |
+| 443 | TCP | SSL |
+| 514 | TCP | Syslog |
+
+▲ 常見應用層協定及其埠號
+
 ### 其他名詞解釋
+
+* IOS：Cisco設備作業系統(Internetwork Operat)，控制交換器所有可執行的功能。
 
 * OSI模型：開放式系統互連通訊參考模型(Open System Interconnection Reference Model)，一種概念模型，由國際標準化組織提出，一個試圖使各種電腦在世界範圍內互連為網路的標準框架，定義於ISO/IEC 7498-1。
 
@@ -77,6 +102,10 @@ keywords : "CCNA, 思科, 名詞解釋, 協定解釋"
 
 * TTL：存活時間(Time To Life)，一個封包在經過一個路由器時，可傳遞的最長距離(躍點數)。
 
+* CLI：命令列介面(Command-Line Interface)，在圖形使用者介面得到普及之前使用最為廣泛的使用者介面，它通常不支援滑鼠，用戶通過鍵盤輸入指令。
+
+* VTY：虛擬終端機(Virtual Teletype Terminal)。
+
 ----------
 
-參考資料：[維基百科](https://zh.wikipedia.org/wiki)
+參考資料：[維基百科](https://zh.wikipedia.org/wiki)、[ICND1/ICND2](https://www.books.com.tw/products/0010757652)

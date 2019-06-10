@@ -301,6 +301,9 @@
   <li>
     <p>MPLS：多協定標簽交換(Multi-Protocol Label Switching)，一種在開放的網際網路上利用標籤啟動資料高速、高效傳輸的新技術，多協定的意涵是指MPLS不但可以支援多種網路層層面上的協定，還可以相容第二層的多種資料鏈路層技術。</p>
   </li>
+  <li>
+    <p>STP：擴展樹協定(Spanning Tree Protocol)，該協定可封鎖某些埠，只讓任何一對LAN的區段之間(Collision domain)存在一條有效路徑。</p>
+  </li>
 </ul>
 
 <h3 id="網際網路層協定與名詞解釋">網際網路層協定與名詞解釋</h3>
@@ -316,7 +319,7 @@
     <p>IP路由：提供設備之間轉送IP封包的服務。</p>
   </li>
   <li>
-    <p>APR：位址解析協定(Address Resolution Protocol)，透過解析網路層位址(IP)來找尋資料鏈結層位址(MAC)的網路傳輸協定。</p>
+    <p>ARP：位址解析協定(Address Resolution Protocol)，透過解析網路層位址(IP)來找尋資料鏈結層位址(MAC)的網路傳輸協定。</p>
   </li>
   <li>
     <p>ICMP：網際網路控制訊息協定(Internet Control Message Protocol)，解析網路封包或是分析路由的情況，於網際網路協定(IP)中傳送控制訊息。</p>
@@ -350,6 +353,9 @@
     <p>SMTP：簡單郵件傳輸協定(Simple Mail Transfer Protocol)，基於文字在網際網路上傳送電子郵件的標準。</p>
   </li>
   <li>
+    <p>SNMP：簡單網路管理協定(Simple Network Management Protocol)，支援網路管理系統，用以監測連接到網路上的裝置是否有任何引起管理上關注的情況。</p>
+  </li>
+  <li>
     <p>DNS：網域名稱系統(Domain Name System)，作為將域名和IP位址相互對映的一個分散式資料庫，能夠使人更方便地存取網際網路。</p>
   </li>
   <li>
@@ -357,9 +363,96 @@
   </li>
 </ul>
 
+<table style="text-align: center;margin:auto">
+  <thead>
+    <tr>
+      <th style="text-align: left">Port</th>
+      <th style="text-align: left">Protocol</th>
+      <th style="text-align: left">Application</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">20</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">FTP Data</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">21</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">FTP Control</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">22</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">SSH</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">23</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">Telnet</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">25</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">SMTP</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">53</td>
+      <td style="text-align: left">TCP,UDP</td>
+      <td style="text-align: left">DNS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">67</td>
+      <td style="text-align: left">UDP</td>
+      <td style="text-align: left">DHCP Server</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">68</td>
+      <td style="text-align: left">UDP</td>
+      <td style="text-align: left">DHCP Client</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">69</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">TFTP</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">80</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">HTTP</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">110</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">POP3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">161</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">SNMP</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">443</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">SSL</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">514</td>
+      <td style="text-align: left">TCP</td>
+      <td style="text-align: left">Syslog</td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="text-align: center;margin:auto">▲ 常見應用層協定及其埠號</p>
+
 <h3 id="其他名詞解釋">其他名詞解釋</h3>
 
 <ul>
+  <li>
+    <p>IOS：Cisco設備作業系統(Internetwork Operat)，控制交換器所有可執行的功能。</p>
+  </li>
   <li>
     <p>OSI模型：開放式系統互連通訊參考模型(Open System Interconnection Reference Model)，一種概念模型，由國際標準化組織提出，一個試圖使各種電腦在世界範圍內互連為網路的標準框架，定義於ISO/IEC 7498-1。</p>
   </li>
@@ -368,7 +461,7 @@
   </li>
 </ul>
 
-<p><img src="/img/1080531/OSI.png" alt="OSI" width="80%" /><br />
+<p style="text-align: center;margin:auto"><img src="/img/1080531/OSI.png" alt="OSI" width="80%" /><br />
 ▲ OSI與TCP/IP綜合比較圖</p>
 
 <ul>
@@ -387,11 +480,17 @@
   <li>
     <p>TTL：存活時間(Time To Life)，一個封包在經過一個路由器時，可傳遞的最長距離(躍點數)。</p>
   </li>
+  <li>
+    <p>CLI：命令列介面(Command-Line Interface)，在圖形使用者介面得到普及之前使用最為廣泛的使用者介面，它通常不支援滑鼠，用戶通過鍵盤輸入指令。</p>
+  </li>
+  <li>
+    <p>VTY：虛擬終端機(Virtual Teletype Terminal)。</p>
+  </li>
 </ul>
 
 <hr />
 
-<p>參考資料：<a href="https://zh.wikipedia.org/wiki">維基百科</a></p>
+<p>參考資料：<a href="https://zh.wikipedia.org/wiki">維基百科</a>、<a href="https://www.books.com.tw/products/0010757652">ICND1/ICND2</a></p>
 
       </article>
 
