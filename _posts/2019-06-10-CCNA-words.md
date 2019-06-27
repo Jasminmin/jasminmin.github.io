@@ -42,7 +42,9 @@ keywords : "CCNA, 思科, 名詞解釋, 協定解釋"
 
 * ICMP：網際網路控制訊息協定(Internet Control Message Protocol)，解析網路封包或是分析路由的情況，於網際網路協定(IP)中傳送控制訊息。
 
-* RIP：路由訊息協定(Routing Information Protocol)以路由跳數作為計數單位的路由協議，適用於比較小型的網絡環境。
+* RIP：路由訊息協定(Routing Information Protocol)，以路由跳數作為計數單位的路由協議，適用於比較小型的網絡環境。
+
+* NAT：網路位址轉換(Network Address Translation)，在IP封包通過路由器或防火牆時重寫來源IP地址或目的IP位址的技術。
 
 ### 傳輸層協定與名詞解釋
 
@@ -119,6 +121,12 @@ keywords : "CCNA, 思科, 名詞解釋, 協定解釋"
 * AP：無線網路基地台(Wireless Access Point)，是電腦網路中一種連接無線網路至有線網路(乙太網)的裝置。
 
 * VTP：虛擬區域網路幹道協定(VLAN Trunking Protocol)，為Cisco專屬協定，讓Cisco交換器可交換VLAN組態資訊，當一個VLAN被新增、刪除或修改時，VTP會讓所有交換器進行同步動作，然而因具有高度隱憂，現許多企業已不再採用。
+
+* IGP：內部通訊協定(Interior Gateway Protocols)，在同一個自治系統(Autonomous System)內部運行的路由通訊協定，例如：OSPF、EIGRP、RIP。
+
+* EGP：外部通訊協定(Exterior Gateway Protocols)，在不同自治系統之間運行的路由通訊協定，例如：BGPv4。
+
+* Autonomous System：自治系統，在同一管理架構下的所有網路。
 
 ----------
 
