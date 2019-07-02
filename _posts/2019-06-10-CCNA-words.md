@@ -42,9 +42,13 @@ keywords : "CCNA, 思科, 名詞解釋, 協定解釋"
 
 * ICMP：網際網路控制訊息協定(Internet Control Message Protocol)，解析網路封包或是分析路由的情況，於網際網路協定(IP)中傳送控制訊息。
 
+* NAT：網路位址轉換(Network Address Translation)，在IP封包通過路由器或防火牆時重寫來源IP地址或目的IP位址的技術。
+
 * RIP：路由訊息協定(Routing Information Protocol)，以路由跳數作為計數單位的路由協議，適用於比較小型的網絡環境。
 
-* NAT：網路位址轉換(Network Address Translation)，在IP封包通過路由器或防火牆時重寫來源IP地址或目的IP位址的技術。
+* OSPF：開放式最短路徑優先(Open Shortest Path First)，隸屬內部網路關協定(IGP)，運作於自治系統內部，採用的最短路徑優先演算法，沒有設備數量(Hop Count)的限制。
+
+* EIGRP：加強型閘道間選徑協定(Enhanced Interior Gateway Routing Protocol)，由Cisco所開發的，網路路徑收斂速度相當快，而所佔用的網路頻寬也相當小，在最短時間裡面，以最少的成本計算出最佳網路傳送路徑。
 
 ### 傳輸層協定與名詞解釋
 
