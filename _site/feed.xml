@@ -18,6 +18,17 @@
       </item>
     
       <item>
+        <title>思科CCNA協定辭海</title>
+        <description>
+          ARP?ICMP?TTL?快速查找協定名稱與名詞解釋 - 
+          爵士米最近上了CCNA的課程，發現第一步最重要的是把「名詞解釋」搞清楚！ 所以依照網路模型做分類，針對各層中的協定與名詞作基本解釋 這時候大家要快速查找名詞定義就方便多囉٩(●˙▿˙●)۶…⋆ฺ 鏈結層協定與名詞解釋 Ethernet：乙太網路，IEEE組織的IEEE 802.3標準制定了乙太網路的技術標準，規定包括實體層的連線、電子訊號和媒介存取層協定的內容。 PPP：點對點協定(Point-to-Point Protocol)，用於兩節點間建立直接的連接，並可以提供連接認證、傳輸加密（使用ECP，RFC 1968）以及壓縮。 HDLC：高級數據鏈路控制(High-Level Data Link Control)，Cisco設備預設所使用的封裝協定，該協定不依賴於任何一種字元編碼集，「0比特插入法」易於硬體實現，全雙工通信方式，有較高的數據鏈路傳輸效率。 Frame Relay：訊框中繼，一種有效的資料傳輸技術，它可以在一對一或者一對多的應用中快速而低廉的傳輸數位資訊。 MAC Address：媒體存取控制位址(Media Access Control Address)，也稱為區域網路位址（LAN Address），乙太網路位址（Ethernet Address）或實體位址（Physical Address），它是一個用來確認網路裝置位置的位址。 CSMA/CD：載波偵測多重存取/碰撞偵測(Carrier Sense Multiple Access with Collision Detection)，當節點要發送訊號時，會先偵測通道是否有其他節點正在使用，當通道沒有被其他節點使用時立即傳送封包，封包傳送後檢查是否發生碰撞，若發生碰撞則對通道發出高頻訊號高知其他節點已經發生碰撞，碰撞後隨機等待一段時間重新發送封包。 MPLS：多協定標簽交換(Multi-Protocol Label Switching)，一種在開放的網際網路上利用標籤啟動資料高速、高效傳輸的新技術，多協定的意涵是指MPLS不但可以支援多種網路層層面上的協定，還可以相容第二層的多種資料鏈路層技術。 STP：擴展樹協定(Spanning Tree Protocol)，該協定可封鎖某些埠，只讓任何一對LAN的區段之間(Collision domain)存在一條有效路徑。 NIC：網路介面卡(Network Interface Card)，用來允許電腦在電腦網路上進行通訊的電腦硬體。 網際網路層協定與名詞解釋 IP：網際網路協定(Internet Protocaol)，根據來源主機與目的主機的位址傳送封包進行資料交換。 IP定址：識別網路中的每個設備。 IP路由：提供設備之間轉送IP封包的服務。 ARP：位址解析協定(Address Resolution Protocol)，透過解析網路層位址(IP)來找尋資料鏈結層位址(MAC)的網路傳輸協定。 ICMP：網際網路控制訊息協定(Internet Control...
+        </description>
+        <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/2019-06-10-CCNA-words/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-06-10-CCNA-words/</guid>
+      </item>
+    
+      <item>
         <title>如何在Windows、Mac或Linux上快速建立指定大小檔案?</title>
         <description>
           各式作業系統中一行指令搞定空白檔案建立 - 
@@ -26,17 +37,6 @@
         <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/2019-06-03-create-files/</link>
         <guid isPermaLink="true">http://localhost:4000/2019-06-03-create-files/</guid>
-      </item>
-    
-      <item>
-        <title>思科CCNA協定辭海</title>
-        <description>
-          ARP?ICMP?TTL?快速查找協定名稱與名詞解釋 - 
-          爵士米最近上了CCNA的課程，發現第一步最重要的是把「名詞解釋」搞清楚！ 所以依照網路模型做分類，針對各層中的協定與名詞作基本解釋 這時候大家要快速查找名詞定義就方便多囉٩(●˙▿˙●)۶…⋆ฺ 鏈結層協定與名詞解釋 Ethernet：乙太網路，IEEE組織的IEEE 802.3標準制定了乙太網路的技術標準，規定包括實體層的連線、電子訊號和媒介存取層協定的內容。 PPP：點對點協定(Point-to-Point Protocol)，用於兩節點間建立直接的連接，並可以提供連接認證、傳輸加密（使用ECP，RFC 1968）以及壓縮。 HDLC：高級數據鏈路控制(High-Level Data Link Control)，Cisco設備預設所使用的封裝協定，該協定不依賴於任何一種字元編碼集，「0比特插入法」易於硬體實現，全雙工通信方式，有較高的數據鏈路傳輸效率。 Frame Relay：訊框中繼，一種有效的資料傳輸技術，它可以在一對一或者一對多的應用中快速而低廉的傳輸數位資訊。 MAC Address：媒體存取控制位址(Media Access Control Address)，也稱為區域網路位址（LAN Address），乙太網路位址（Ethernet Address）或實體位址（Physical Address），它是一個用來確認網路裝置位置的位址。 CSMA/CD：載波偵測多重存取/碰撞偵測(Carrier Sense Multiple Access with Collision Detection)，當節點要發送訊號時，會先偵測通道是否有其他節點正在使用，當通道沒有被其他節點使用時立即傳送封包，封包傳送後檢查是否發生碰撞，若發生碰撞則對通道發出高頻訊號高知其他節點已經發生碰撞，碰撞後隨機等待一段時間重新發送封包。 MPLS：多協定標簽交換(Multi-Protocol Label Switching)，一種在開放的網際網路上利用標籤啟動資料高速、高效傳輸的新技術，多協定的意涵是指MPLS不但可以支援多種網路層層面上的協定，還可以相容第二層的多種資料鏈路層技術。 STP：擴展樹協定(Spanning Tree Protocol)，該協定可封鎖某些埠，只讓任何一對LAN的區段之間(Collision domain)存在一條有效路徑。 NIC：網路介面卡(Network Interface Card)，用來允許電腦在電腦網路上進行通訊的電腦硬體。 網際網路層協定與名詞解釋 IP：網際網路協定(Internet Protocaol)，根據來源主機與目的主機的位址傳送封包進行資料交換。 IP定址：識別網路中的每個設備。 IP路由：提供設備之間轉送IP封包的服務。 ARP：位址解析協定(Address Resolution Protocol)，透過解析網路層位址(IP)來找尋資料鏈結層位址(MAC)的網路傳輸協定。 ICMP：網際網路控制訊息協定(Internet Control...
-        </description>
-        <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/2019-05-31-CCNA-words/</link>
-        <guid isPermaLink="true">http://localhost:4000/2019-05-31-CCNA-words/</guid>
       </item>
     
       <item>
@@ -54,7 +54,7 @@
         <title>如何查詢Domain?Whois網站推薦指南</title>
         <description>
           UR?IP?Domain?一起檢視連線網站的來源吧 - 
-          大家常說的「網址」，也就是URL，正是每個網站連線的位址 ʘ ͜ʖ ʘ 什麼是URL? 統一資源定位器，Uniform Resource Locator（URL），網際網路上標準的資源的位址。 簡而言之，就是網站連線的連結「link」 像Jasmine部落格自我介紹的URL就是https://jasminmin.com/aboutme/ 什麼是IP? 網際網路協定位址，Internet Protocol Address（IP），是分配給網路上使用網際協定的裝置的數字標籤。 每個網站都有自己的伺服器位址，也就是IP位址～ 當我們沒有對這些四組數字組成的IP做美化時，連線時的URL就是裸露的IP位址。 如何將IP美化呢?就需要Domain的幫助囉！ 什麼是Domain? 網域名稱，Domain Name（Domain），簡稱域名、網域，是由一串用點分隔的字元組成的網際網路上某一台電腦或電腦組的名稱，用於在資料傳輸時標識電腦的電子方位。 大家可以將Domain想成是IP的面具，舉例來說jasminmin.com就是我的部落格域名。 如果把每個網站視為一間房子，而Domain就是他的門牌號碼囉！ 那URL跟Domain有什麼差別呢？ 我們將Domian視為URL的一部分，網站中的分頁就是需要靠URL做連結。 接下來就進入正題吧(｡+･｀ω･´) 科技爆炸的時代，大家什麼都喜歡估狗一下，然而你連線的網站安全嗎？ 是不是手機常跳出中獎畫面？是不是常常被廣告覆蓋呢？ 以下介紹「WHOIS」提供大家解決不明來源網站查詢吧～ 什麼是WHOIS? 用來查詢網際網路中域名的IP以及所有者等資訊的傳輸協定。 早期的WHOIS查詢多以命令列介面（Command Line）存在，現在也有許多線上查詢工具，甚至可以一次向不同的資料庫查詢。 我們只要將不明來源的網址或IP丟到網站進行查詢，就可以檢視該網站的來源！ 還有什麼狀況會需要查詢IP或Domain呢? 查詢網域註冊商：通常購買域名採年份計，當你忘記從哪家註冊商購買時可藉此查詢。 查詢註冊時間及到期日：域名逾期將造成網站無法連線，記得查看到期日喔！ 檢查域名是否遭註冊：當你想創建自己的網站域名，可先至WHOIS查詢。 網站IP及地理位置：當你的電腦或應用程式連線至不明IP或Domian，可以查看所屬公司或地理位置。 除了上述這些，我們也可以當作連線保護的機制 查詢網域可以確認是否為「高風險國家」所註冊之網域，避免遭個資釣魚！ WHOis.net Whois who.is GoDaddy iplocation neustar 上述介紹網站中，前四項為WHOIS查詢瀏覽器，主要針對該域名註冊廠商及時間做查詢。 後兩項皆可使用IP及Domian做查詢，內容主要針對伺服器位置做地圖標示。 如果有任何推薦的查詢網站，也歡迎大家留言告訴大家喔╭( ･ㅂ･)و...
+          大家常說的「網址」，也就是URL，正是每個網站連線的位址 ʘ ͜ʖ ʘ 什麼是URL? 統一資源定位器，Uniform Resource Locator（URL），網際網路上標準的資源的位址。 簡而言之，就是網站連線的連結「link」 像Jasmine部落格自我介紹的URL就是https://jasminmin.com/aboutme/ 什麼是IP? 網際網路協定位址，Internet Protocol Address（IP），是分配給網路上使用網際協定的裝置的數字標籤。 每個網站都有自己的伺服器位址，也就是IP位址～ 當我們沒有對這些四組數字組成的IP做美化時，連線時的URL就是裸露的IP位址。 如何將IP美化呢?就需要Domain的幫助囉！ 什麼是Domain? 網域名稱，Domain Name（Domain），簡稱域名、網域，是由一串用點分隔的字元組成的網際網路上某一台電腦或電腦組的名稱，用於在資料傳輸時標識電腦的電子方位。 大家可以將Domain想成是IP的面具，舉例來說jasminmin.com就是我的部落格域名。 如果把每個網站視為一間房子，而Domain就是他的門牌號碼囉！ 那URL跟Domain有什麼差別呢？ 我們將Domian視為URL的一部分，網站中的分頁就是需要靠URL做連結。 接下來就進入正題吧(｡+･｀ω･´) 科技爆炸的時代，大家什麼都喜歡估狗一下，然而你連線的網站安全嗎？ 是不是手機常跳出中獎畫面？是不是常常被廣告覆蓋呢？ 以下介紹「WHOIS」提供大家解決不明來源網站查詢吧～ 什麼是WHOIS? 用來查詢網際網路中域名的IP以及所有者等資訊的傳輸協定。 早期的WHOIS查詢多以命令列介面（Command Line）存在，現在也有許多線上查詢工具，甚至可以一次向不同的資料庫查詢。 我們只要將不明來源的網址或IP丟到網站進行查詢，就可以檢視該網站的來源！ 還有什麼狀況會需要查詢IP或Domain呢? 查詢網域註冊商：通常購買域名採年份計，當你忘記從哪家註冊商購買時可藉此查詢。 查詢註冊時間及到期日：域名逾期將造成網站無法連線，記得查看到期日喔！ 檢查域名是否遭註冊：當你想創建自己的網站域名，可先至WHOIS查詢。 網站IP及地理位置：當你的電腦或應用程式連線至不明IP或Domian，可以查看所屬公司或地理位置。 除了上述這些，我們也可以當作連線保護的機制 查詢網域可以確認是否為「高風險國家」所註冊之網域，避免遭個資釣魚！ WHOis.net WHOis.net主要為查詢該DNS是否已被註冊，並顯示註冊商公司、註冊郵件、電話、地址及有效到期日等資訊。 Whois Whois網站提供該DNS註冊商公司、郵件、電話、地址及有效到期日等資訊，並提供該網域由哪間域名公司售出，網站旁邊也會提供類似網域及建議售價。 who.is who.is網站提供該DNS註冊商公司、郵件、電話、地址及有效到期日等資訊，也提供可申請的類似網域名稱。 GoDaddy Godaddy本身即是可供購買網域的服務商，其中也有讓使用者查詢DNS的服務，但在查詢過程中會驗證使用者是否是機器人，相較前三項小麻煩一點。 IpLocation IpLocation針對該DNS做IP查詢，查詢結果顯示IP2LOCATION、ipinfo、dbip三網站的結果，使用者可相互比對做地理位置確認。...
         </description>
         <pubDate>Tue, 30 Apr 2019 00:00:00 +0000</pubDate>
         <link>http://localhost:4000/2019-04-30-who-is-websites/</link>

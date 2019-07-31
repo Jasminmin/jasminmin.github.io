@@ -48,24 +48,44 @@ keywords : "domain, 網頁安全, whois, 域名, 網站連線, URL"
 除了上述這些，我們也可以當作連線保護的機制<br>
 查詢網域可以確認是否為「高風險國家」所註冊之網域，避免遭個資釣魚！<br>
 
+------------
 ### [WHOis.net](https://www.whois.net)
 ![whois.net](/img/1080430/1.png)
 
+WHOis.net主要為查詢該DNS是否已被註冊，並顯示註冊商公司、註冊郵件、電話、地址及有效到期日等資訊。
+
+------------
 ### [Whois](https://www.whois.com/whois/)
 ![Whois](/img/1080430/2.png)
 
+Whois網站提供該DNS註冊商公司、郵件、電話、地址及有效到期日等資訊，並提供該網域由哪間域名公司售出，網站旁邊也會提供類似網域及建議售價。
+
+------------
 ### [who.is](https://who.is)
 ![who.is](/img/1080430/3.png)
 
+who.is網站提供該DNS註冊商公司、郵件、電話、地址及有效到期日等資訊，也提供可申請的類似網域名稱。
+
+------------
 ### [GoDaddy](https://tw.godaddy.com/whois)
 ![godaddy](/img/1080430/4.png)
 
-### [iplocation](https://www.iplocation.net)
+Godaddy本身即是可供購買網域的服務商，其中也有讓使用者查詢DNS的服務，但在查詢過程中會驗證使用者是否是機器人，相較前三項小麻煩一點。
+
+------------
+### [IpLocation](https://www.iplocation.net)
 ![iplocation](/img/1080430/5.png)
 
-### [neustar](https://www.ultratools.com/tools/ipWhoisLookupResult)
+IpLocation針對該DNS做IP查詢，查詢結果顯示[IP2LOCATION](https://www.ip2location.com)、[ipinfo](https://ipinfo.io)、[dbip](https://www.db-ip.com)三網站的結果，使用者可相互比對做地理位置確認。
+
+------------
+### [Neustar](https://www.ultratools.com/tools/ipWhoisLookupResult)
 ![neustar](/img/1080430/6.png)
 
+neustar是一個提供多種服務的網站，包括IPv6、Email等皆可在網站內搜尋，輸入DNS時記得去除`https://`，否則會一直顯示該網址無效喔！<br>
+而neustar可查詢到的資訊除註冊商或註冊人的詳細資料外，包括主機所在IP、國家、城市皆會提供，這時候就可以做目的性多重驗證。
+
+------------
 上述介紹網站中，前四項為WHOIS查詢瀏覽器，主要針對該域名註冊廠商及時間做查詢。<br>
 後兩項皆可使用IP及Domian做查詢，內容主要針對伺服器位置做地圖標示。<br>
 如果有任何推薦的查詢網站，也歡迎大家留言告訴大家喔╭( ･ㅂ･)و
