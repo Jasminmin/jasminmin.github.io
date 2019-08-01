@@ -7,6 +7,17 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>如何遠端連線到VPS上的主機&gt;&gt;&gt;Remote Desktop!</title>
+        <description>
+          Windows及macOS遠端連線Windows on VPS~ - 
+          大家常用VPS架站或Run程式測試嗎？ 如果不熟悉指令或需要圖形化介面時該怎麼辦呢(◎_◎;) 今天來教大家如何在Windows及Mac上進行遠端桌面連線吧！ 以下會依Windows、Mac兩個作業系統做步驟講解 首先要在VPS服務商架設一台符合作業系統需求的伺服器主機 對於服務商大家都各有所好，爵士米是使用大名鼎鼎的Vultr 為了讓大家增加親切感我們選擇Windows作業系統的虛擬主機 在Vultr架設Windows作業系統每個月需要基本16美金 額外則是視你所需要的Server Size決定價格 這邊我們僅選擇最低55GB SSD及2G記憶體的規格 待數分鐘主機建立完成後，就可以查看所建立伺服器IP囉 Windows Step1 遠端桌面連線程式 Windows主機中可鍵入Windows+R搜尋mstsc開啟遠端桌面程式 開啟後輸入所要連線的主機IP或DNS及使用者名稱，並點擊「連線」 Step2 信任遠端連線 跳出信任警訊時點擊「連線」以信任該伺服器 Step3 初始化遠端連線 Step4 身份驗證 完成初始化後將跳出Windows安全性警示，輸入VPS上Username及Password進行連線 Step5 跳過警訊 顯示警訊時請跳過，但如果不是個人VPS請不要亂跳過喔 Step6 完成遠端連線 待遠端連線開機後就可以連線到我們自己架的VPS囉！ 這時候的使用方式就跟一般電腦一樣～ Mac Step1 下載「Microsoft Remote Desktop 10」 Mac進行遠端桌面連線需要借助App的力量啦～ 大家可以到App Store下載「Microsoft Remote Desktop 10」 Step2 Add Desktop 下載完成後開啟App，並點擊「Add Desktop」...
+        </description>
+        <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/2019-08-01-remote-windows-on-VPS/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019-08-01-remote-windows-on-VPS/</guid>
+      </item>
+    
+      <item>
         <title>思科CCNA故障排除解析</title>
         <description>
           乙太網路介面shutdown怎麼辦？Default Router的IP設定錯誤？ - 

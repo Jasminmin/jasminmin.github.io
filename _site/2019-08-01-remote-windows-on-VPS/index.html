@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>如何在Windows、Mac或Linux上快速建立指定大小檔案?</title>
+  <title>如何遠端連線到VPS上的主機>>>Remote Desktop!</title>
 
   <meta name="author" content="Jasmine Chang" />
 
   
-  <meta name="description" content="各式作業系統中一行指令搞定空白檔案建立">
+  <meta name="description" content="Windows及macOS遠端連線Windows on VPS~">
   
 
   
-  <meta name="keywords" content="windows, mac, ubuntu, 空白檔案, 指定大小, 檔案建立, fallocate, mkfile, fsutil">
+  <meta name="keywords" content="remote desktop, windows, mac, 遠端連線, VPS">
   
 
   <link rel="alternate" type="application/rss+xml" title="Jasmine's BLOG - Technology , ArtDesign , DailyLife !" href="/feed.xml" />
@@ -77,18 +77,18 @@
   
 
   
-  <meta property="og:title" content="如何在Windows、Mac或Linux上快速建立指定大小檔案?" />
+  <meta property="og:title" content="如何遠端連線到VPS上的主機>>>Remote Desktop!" />
   
 
    
-  <meta property="og:description" content="各式作業系統中一行指令搞定空白檔案建立">
+  <meta property="og:description" content="Windows及macOS遠端連線Windows on VPS~">
   
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/2019-06-03-create-files/" />
-  <link rel="canonical" href="http://localhost:4000/2019-06-03-create-files/" />
+  <meta property="og:url" content="http://localhost:4000/2019-08-01-remote-windows-on-VPS/" />
+  <link rel="canonical" href="http://localhost:4000/2019-08-01-remote-windows-on-VPS/" />
   
 
   
@@ -102,11 +102,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="如何在Windows、Mac或Linux上快速建立指定大小檔案?" />
+  <meta name="twitter:title" content="如何遠端連線到VPS上的主機>>>Remote Desktop!" />
   
 
   
-  <meta name="twitter:description" content="各式作業系統中一行指令搞定空白檔案建立">
+  <meta name="twitter:description" content="Windows及macOS遠端連線Windows on VPS~">
   
 
   
@@ -245,15 +245,15 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>如何在Windows、Mac或Linux上快速建立指定大小檔案?</h1>
+          <h1>如何遠端連線到VPS上的主機>>>Remote Desktop!</h1>
 		  
 		    
-			<h2 class="post-subheading">各式作業系統中一行指令搞定空白檔案建立</h2>
+			<h2 class="post-subheading">Windows及macOS遠端連線Windows on VPS~</h2>
 			
 		  
 		  
 		  
-		  <span class="post-meta">Posted on June 3, 2019</span>
+		  <span class="post-meta">Posted on August 1, 2019</span>
 		  
         </div>
       </div>
@@ -273,87 +273,106 @@
       
 
       <article role="main" class="blog-post">
-        <p>工具測試時需要各式大小的檔案，熊熊ʕ◉ᴥ◉ʔ找不到嗎<br />
-對！我就是那個不想隨便拿一個檔案測試的傢伙<br />
-那就看看在<a href="#windows">Windows</a>、<a href="#mac">Mac</a>或<a href="#ubuntu">Ubuntu</a>上如何建立指定大小的空白檔案吧～<br /></p>
+        <p>大家常用VPS架站或Run程式測試嗎？<br />
+如果不熟悉指令或需要圖形化介面時該怎麼辦呢(◎_◎;)<br />
+今天來教大家如何在Windows及Mac上進行遠端桌面連線吧！<br />
+以下會依<a href="#windows">Windows</a>、<a href="#mac">Mac</a>兩個作業系統做步驟講解<br /></p>
+
+<hr />
+
+<p>首先要在VPS服務商架設一台符合作業系統需求的伺服器主機<br />
+對於服務商大家都各有所好，爵士米是使用大名鼎鼎的<a href="https://www.vultr.com">Vultr</a><br />
+為了讓大家增加親切感我們選擇Windows作業系統的虛擬主機<br />
+在Vultr架設Windows作業系統每個月需要基本16美金<br />
+額外則是視你所需要的Server Size決定價格<br />
+這邊我們僅選擇最低55GB SSD及2G記憶體的規格<br /></p>
+
+<p><img src="/img/1080801/vultr-1.png" alt="vultr-1" /></p>
+
+<p>待數分鐘主機建立完成後，就可以查看所建立伺服器IP囉<br /></p>
+
+<p><img src="/img/1080801/vultr-2.png" alt="vultr-２" /></p>
 
 <h2 id="windows"><font color="#6495ED">Windows</font></h2>
 
-<h3 id="step1-開啟cmd">Step1 開啟CMD</h3>
+<h3 id="step1-遠端桌面連線程式">Step1 遠端桌面連線程式</h3>
 
-<p>快速開啟命令提示字元，輸入<code class="highlighter-rouge">Windows鍵</code>及<code class="highlighter-rouge">cmd</code>並按下<code class="highlighter-rouge">Enter</code><br /></p>
+<p>Windows主機中可鍵入<code class="highlighter-rouge">Windows+R</code>搜尋<strong><em>mstsc</em></strong>開啟遠端桌面程式<br />
+開啟後輸入所要連線的主機IP或DNS及使用者名稱，並點擊「連線」<br /></p>
 
-<p><img src="/img/1080603/w-1.png" alt="w-1" /></p>
+<p><img src="/img/1080801/win-1.png" alt="win-1" width="60%" /></p>
 
-<hr />
+<h3 id="step2-信任遠端連線">Step2 信任遠端連線</h3>
 
-<h3 id="step2-前往檔案產生位置">Step2 前往檔案產生位置</h3>
+<p>跳出信任警訊時點擊「連線」以信任該伺服器<br /></p>
 
-<p>輸入<code class="highlighter-rouge">cd &lt;directory&gt;</code>，前往欲產生檔案的位置，以下路徑前往桌面<br /></p>
+<p><img src="/img/1080801/win-2.png" alt="win-2" width="60%" /></p>
 
-<p><img src="/img/1080603/w-2.PNG" alt="w-2" /></p>
+<h3 id="step3-初始化遠端連線">Step3 初始化遠端連線</h3>
 
-<hr />
+<p><img src="/img/1080801/win-3.png" alt="win-3" width="60%" /></p>
 
-<h3 id="step3-建立檔案">Step3 建立檔案</h3>
+<h3 id="step4-身份驗證">Step4 身份驗證</h3>
 
-<p>輸入<code class="highlighter-rouge">fsutil</code>指令建立指定大小檔案，其中檔案大小單位為<strong>kilo-byte</strong><br />
-1KB：1 X 1024 = 1024<br />
-1MB：1 X 1024 X 1024 = 1048576<br />
-1GB：1 X 1024 X 1024 X 1024 ＝ 1073741824<br /></p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fsutile file createnew &lt;file_name&gt; &lt;file_size_in_kBs&gt;
-</code></pre></div></div>
-<p>以下範例為「在桌面建立名為<strong>TEST</strong>的1GB大小檔案」<br /></p>
+<p>完成初始化後將跳出Windows安全性警示，輸入VPS上Username及Password進行連線<br /></p>
 
-<p><img src="/img/1080603/w-3.PNG" alt="w-3" /></p>
+<p><img src="/img/1080801/win-4.png" alt="win-4" width="60%" /></p>
+
+<h3 id="step5-跳過警訊">Step5 跳過警訊</h3>
+
+<p>顯示警訊時請跳過，但如果不是個人VPS請不要亂跳過喔<br /></p>
+
+<p><img src="/img/1080801/win-5.png" alt="win-5" width="60%" /></p>
+
+<h3 id="step6-完成遠端連線">Step6 完成遠端連線</h3>
+
+<p>待遠端連線開機後就可以連線到我們自己架的VPS囉！<br />
+這時候的使用方式就跟一般電腦一樣～<br /></p>
+
+<p><img src="/img/1080801/win-6.png" alt="win-6" /></p>
 
 <hr />
 
 <h2 id="mac"><font color="#6495ED">Mac</font></h2>
 
-<h3 id="step1-開啟cmd-1">Step1 開啟CMD</h3>
+<h3 id="step1-下載microsoft-remote-desktop-10">Step1 下載「Microsoft Remote Desktop 10」</h3>
 
-<p>Mac開啟CMD後預設位置在Home底下，可自行更改檔案位置<br /></p>
+<p>Mac進行遠端桌面連線需要借助App的力量啦～<br />
+大家可以到App Store下載「Microsoft Remote Desktop 10」<br /></p>
 
-<p><img src="/img/1080603/m-1.png" alt="m-1" /></p>
+<p><img src="/img/1080801/mac-1.png" alt="mac-1" /></p>
 
-<hr />
+<h3 id="step2-add-desktop">Step2 Add Desktop</h3>
 
-<h3 id="step2-建立檔案">Step2 建立檔案</h3>
+<p>下載完成後開啟App，並點擊「Add Desktop」<br /></p>
 
-<p>輸入<code class="highlighter-rouge">mkfile</code>指令建立指定大小檔案<br /></p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfile <span class="o">[</span><span class="nt">-n</span><span class="o">]</span> size[b|k|m|g] filename
-</code></pre></div></div>
-<p>可直接輸入檔案大小，[b|k|m|g]代表Byte、KB、MB、GB<br />
-以下範例為「在Home目錄底下建立名為<strong>Mac_Test</strong>的1KB大小檔案」<br /></p>
+<p><img src="/img/1080801/mac-2.png" alt="mac-2" width="80%" /></p>
 
-<p><img src="/img/1080603/m-2.png" alt="m-2" /></p>
+<h3 id="step3-輸入連線資訊">Step3 輸入連線資訊</h3>
 
-<hr />
+<p>於PC Name欄位填入VPS的IP或DNS並且取一個自己認得的主機名稱<br /></p>
 
-<h2 id="ubuntu"><font color="#6495ED">Ubuntu</font></h2>
+<p><img src="/img/1080801/mac-3.png" alt="mac-3" width="80%" /></p>
 
-<h3 id="step1-開啟cmd-2">Step1 開啟CMD</h3>
+<h3 id="step4-開啟desktops">Step4 開啟Desktops</h3>
 
-<p>這個範例的作業系統是以遠端連線進入，大家在本機可以直接開啟CMD<br />
-完成連線後輸入<code class="highlighter-rouge">cd home</code>進入home目錄底下<br /></p>
+<p>雙擊剛才所建立的桌面<br /></p>
 
-<p><img src="/img/1080603/u-1.png" alt="u-1" /></p>
+<p><img src="/img/1080801/mac-4.png" alt="mac-4" width="80%" /></p>
 
-<hr />
+<h3 id="step5-身份驗證">Step5 身份驗證</h3>
 
-<h3 id="step2-建立檔案-1">Step2 建立檔案</h3>
+<p>輸入VPS上Username及Password進行連線<br /></p>
 
-<p>輸入<code class="highlighter-rouge">fallocate</code>指令建立指定大小檔案<br /></p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fallocate <span class="nt">-l</span> &lt;file_size&gt; &lt;file_name&gt;
-</code></pre></div></div>
-<p>以下範例為「在Home目錄底下建立名為<strong>Ubuntu_Test</strong>的4GB大小檔案」<br /></p>
+<p><img src="/img/1080801/mac-5.png" alt="mac-5" width="80%" /></p>
 
-<p><img src="/img/1080603/u-2.png" alt="u-2" /></p>
+<h3 id="step6-完成遠端連線-1">Step6 完成遠端連線</h3>
+
+<p><img src="/img/1080801/mac-6.png" alt="mac-6" /></p>
 
 <hr />
 
-<p>以上，大家可以在各作業系統底下建立指定大小檔案啦 ༼ つ◕(oo)◕༽つ<br /></p>
+<p>以上，就可以輕鬆的進行VPS遠端桌面連線啦・+(<em>゜∀゜</em>)+・<br /></p>
 
       </article>
 
@@ -367,8 +386,6 @@
             <a href="/tags#windows">windows</a>
           
             <a href="/tags#mac">mac</a>
-          
-            <a href="/tags#ubuntu">ubuntu</a>
           
           
         </div>
@@ -385,7 +402,7 @@
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=%E5%A6%82%E4%BD%95%E5%9C%A8Windows%E3%80%81Mac%E6%88%96Linux%E4%B8%8A%E5%BF%AB%E9%80%9F%E5%BB%BA%E7%AB%8B%E6%8C%87%E5%AE%9A%E5%A4%A7%E5%B0%8F%E6%AA%94%E6%A1%88%3F+http://localhost:4000/2019-06-03-create-files/"
+    <a href="https://twitter.com/intent/tweet?text=%E5%A6%82%E4%BD%95%E9%81%A0%E7%AB%AF%E9%80%A3%E7%B7%9A%E5%88%B0VPS%E4%B8%8A%E7%9A%84%E4%B8%BB%E6%A9%9F%3E%3E%3ERemote+Desktop%21+http://localhost:4000/2019-08-01-remote-windows-on-VPS/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -394,7 +411,7 @@
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-06-03-create-files/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-08-01-remote-windows-on-VPS/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -405,7 +422,7 @@
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-06-03-create-files/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-08-01-remote-windows-on-VPS/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -421,13 +438,9 @@
       <ul class="pager blog-pager">
         
         <li class="previous">
-          <a href="/2019-05-03-ubuntu-commands/" data-toggle="tooltip" data-placement="top" title="Linux/Ubuntu系統目錄解析與Command指令全集">&larr; Previous Post</a>
+          <a href="/2019-06-11-CCNA-troubleshooting/" data-toggle="tooltip" data-placement="top" title="思科CCNA故障排除解析">&larr; Previous Post</a>
         </li>
         
-        
-        <li class="next">
-          <a href="/2019-06-10-CCNA-words/" data-toggle="tooltip" data-placement="top" title="思科CCNA協定辭海">Next Post &rarr;</a>
-        </li>
         
       </ul>
 

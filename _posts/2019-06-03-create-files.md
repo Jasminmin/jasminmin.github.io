@@ -18,11 +18,15 @@ keywords : "windows, mac, ubuntu, 空白檔案, 指定大小, 檔案建立, fall
 
 ![w-1](/img/1080603/w-1.png)
 
+------------
+
 ### Step2 前往檔案產生位置
 
 輸入`cd <directory>`，前往欲產生檔案的位置，以下路徑前往桌面<br>
 
 ![w-2](/img/1080603/w-2.PNG)
+
+------------
 
 ### Step3 建立檔案
 
@@ -37,6 +41,8 @@ fsutile file createnew <file_name> <file_size_in_kBs>
 
 ![w-3](/img/1080603/w-3.PNG)
 
+------------
+
 ##  <font color="#6495ED">Mac</font>
 
 ### Step1 開啟CMD
@@ -44,6 +50,8 @@ fsutile file createnew <file_name> <file_size_in_kBs>
 Mac開啟CMD後預設位置在Home底下，可自行更改檔案位置<br>
 
 ![m-1](/img/1080603/m-1.png)
+
+------------
 
 ### Step2 建立檔案
 
@@ -56,6 +64,8 @@ mkfile [-n] size[b|k|m|g] filename
 
 ![m-2](/img/1080603/m-2.png)
 
+------------
+
 ##  <font color="#6495ED">Ubuntu</font>
 
 ### Step1 開啟CMD
@@ -64,6 +74,8 @@ mkfile [-n] size[b|k|m|g] filename
 完成連線後輸入`cd home`進入home目錄底下<br>
 
 ![u-1](/img/1080603/u-1.png)
+
+------------
 
 ### Step2 建立檔案
 
