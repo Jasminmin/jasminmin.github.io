@@ -41,6 +41,10 @@
 <lastmod>2019-08-01T00:00:00+00:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2019-10-28-chromatics/</loc>
+<lastmod>2019-10-28T00:00:00+00:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/aboutme/</loc>
 </url>
 <url>
@@ -51,5 +55,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page3/</loc>
 </url>
 </urlset>
