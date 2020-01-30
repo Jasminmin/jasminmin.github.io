@@ -19,12 +19,7 @@ keywords : "remote desktop, windows, mac, 遠端連線, VPS"
 在Vultr架設Windows作業系統每個月需要基本16美金<br>
 額外則是視你所需要的Server Size決定價格<br>
 這邊我們僅選擇最低55GB SSD及2G記憶體的規格<br>
-
-![vultr-1](/img/1080801/vultr-1.png)
-
 待數分鐘主機建立完成後，就可以查看所建立伺服器IP囉<br>
-
-![vultr-２](/img/1080801/vultr-2.png)
 
 ##  <font color="#6495ED">Windows</font>
 

@@ -6,14 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
 
-  <title>First post!</title>
+  <title>MacOS運用terminal進行遠端連線及檔案傳輸</title>
 
   <meta name="author" content="Jasmine Chang" />
 
   
-  <meta name="description" content="歡迎來到爵士米的部落格">
+  <meta name="description" content="使用ssh,sftp,scp快速Tips!">
   
 
+  
+  <meta name="keywords" content="MacOS, 遠端連線, ssh, sftp, scp, 遠端檔案傳輸">
   
 
   <link rel="alternate" type="application/rss+xml" title="Jasmine's BLOG - Technology , ArtDesign , DailyLife !" href="/feed.xml" />
@@ -75,18 +77,18 @@
   
 
   
-  <meta property="og:title" content="First post!" />
+  <meta property="og:title" content="MacOS運用terminal進行遠端連線及檔案傳輸" />
   
 
    
-  <meta property="og:description" content="歡迎來到爵士米的部落格">
+  <meta property="og:description" content="使用ssh,sftp,scp快速Tips!">
   
 
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://localhost:4000/2019-04-03-first-post/" />
-  <link rel="canonical" href="http://localhost:4000/2019-04-03-first-post/" />
+  <meta property="og:url" content="http://localhost:4000/2020-01-30-mac-terminal/" />
+  <link rel="canonical" href="http://localhost:4000/2020-01-30-mac-terminal/" />
   
 
   
@@ -100,11 +102,11 @@
   <meta name="twitter:creator" content="@" />
 
   
-  <meta name="twitter:title" content="First post!" />
+  <meta name="twitter:title" content="MacOS運用terminal進行遠端連線及檔案傳輸" />
   
 
   
-  <meta name="twitter:description" content="歡迎來到爵士米的部落格">
+  <meta name="twitter:description" content="使用ssh,sftp,scp快速Tips!">
   
 
   
@@ -220,7 +222,7 @@
 	<div class="avatar-container">
 	  <div class="avatar-img-border">
 	    <a href="http://localhost:4000">
-	      <img class="avatar-img" src="/img/1080403/post_1.png" />
+	      <img class="avatar-img" src="/img/profile.png" />
 		</a>
 	  </div>
 	</div>
@@ -235,56 +237,23 @@
 
 
 
-  <div id="header-big-imgs" data-num-img=1
-    
-	  
-	  
-	    
-		  data-img-src-1="/img/1080403/post_1_bg.png"
-		
-	  
-    
-  ></div>
 
-
-<header class="header-section has-img">
-
-<div class="big-img intro-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-heading">
-          <h1>First post!</h1>
-		  
-		    
-			<h2 class="post-subheading">歡迎來到爵士米的部落格</h2>
-			
-		  
-		  
-		  
-		  <span class="post-meta">Posted on April 3, 2019</span>
-		  
-        </div>
-      </div>
-    </div>
-  </div>
-  <span class='img-desc'></span>
-</div>
+<header class="header-section ">
 
 <div class="intro-header no-img">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="post-heading">
-          <h1>First post!</h1>
+          <h1>MacOS運用terminal進行遠端連線及檔案傳輸</h1>
 		  
 		    
-			<h2 class="post-subheading">歡迎來到爵士米的部落格</h2>
+			<h2 class="post-subheading">使用ssh,sftp,scp快速Tips!</h2>
 			
 		  
 		  
 		  
-		  <span class="post-meta">Posted on April 3, 2019</span>
+		  <span class="post-meta">Posted on January 30, 2020</span>
 		  
         </div>
       </div>
@@ -304,13 +273,85 @@
       
 
       <article role="main" class="blog-post">
-        <p>This is my first post, how exciting!</p>
+        <p>時隔三個月擠出微微時間d( ･ω´･+)<br />
+分享一下MacOS上遠端傳檔及連線的小撇步給大家！<br />
+當需要從MacOS上連線VPS或Linux作業系統時都用什麼方法呢？<br />
+你知道可以不透過其他application進行連線嗎？<br />
+試看看不安裝任何程式就可以連線吧<br />
+with <del>STRONG</del> Command Line(つ ͡° ͜ʖ ͡°)つ<br /></p>
 
-<p>在這 分享學習的一切</p>
+<hr />
 
-<p>科技、藝術、生活</p>
+<h3 id="use-of-ssh">Use of SSH</h3>
 
-<p>ENJOY IT!</p>
+<ul>
+  <li>連線遠端主機，連線後輸入密碼
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ssh hostName@IP</span>
+ssh root@192.168.0.1
+</code></pre></div>    </div>
+  </li>
+  <li>針對特定port連線
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># ssh -p portNum hostName@IP</span>
+ssh <span class="nt">-p</span> 22 root@192.168.0.1
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="use-of-scp">Use of SCP</h3>
+
+<ul>
+  <li>遠端複製至本機
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># scp -r hostName@IP:remotePath localPath</span>
+scp <span class="nt">-r</span> root@192.168.0.100:/home/test.zip /Users/jasmine/downloads/
+</code></pre></div>    </div>
+  </li>
+  <li>本機複製至遠端
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># scp -r localPath/fileName hostName@IP:remotePath</span>
+scp <span class="nt">-r</span> /Users/jasmine/downloads/test.pdf root@192.168.0.100:/home/
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="use-of-sftp">Use of SFTP</h3>
+
+<ul>
+  <li>連線遠端主機，連線後輸入密碼
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># sftp hostName@IP:remotePath</span>
+sftp root@192.168.100.1
+</code></pre></div>    </div>
+  </li>
+  <li>上傳檔案或資料夾
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 查看遠端連線後當前資料夾</span>
+sftp&gt; <span class="nb">pwd
+</span>Remote working directory: /home/root/remote/
+<span class="c"># 查看本機端當前資料夾</span>
+sftp&gt; lpwd
+Local working directory: /Users/jasmine/local/
+<span class="c"># 上傳檔案 put -r localPath/fileName remotePath</span>
+put <span class="nt">-r</span> /Users/jasmine/local/file.pdf  /home/root/remote/
+<span class="c"># 上傳資料夾 put -r localPath/folderName/* remotePath</span>
+put <span class="nt">-r</span> /Users/jasmine/local/testFolder/<span class="k">*</span> /home/root/remote/newFolder/
+</code></pre></div>    </div>
+  </li>
+  <li>下載檔案或資料夾
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 下載檔案 get -r remotePath/fileName localPath</span>
+put <span class="nt">-r</span> /home/root/remote/file.pdf  /Users/jasmine/local/
+<span class="c"># 下載資料夾 put -r remotePath/folderName/* localPath</span>
+put <span class="nt">-r</span> /home/root/remote/testFolder/<span class="k">*</span> /Users/jasmine/local/newFolder/
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="how-to-exit">How to exit?</h3>
+
+<p>要怎麼離開遠端主機呢?<br />
+其實就是<code class="highlighter-rouge">exit</code>喔！<br /></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">exit</span>
+</code></pre></div></div>
+
+<hr />
+<p>That’s all.(ง •̀ω•́)ง✧<br />
+Let’s call it a day~</p>
 
       </article>
 
@@ -320,6 +361,10 @@
           
           
             <a href="/tags#lifetime">lifetime</a>
+          
+            <a href="/tags#mac">mac</a>
+          
+            <a href="/tags#linux">linux</a>
           
           
         </div>
@@ -336,7 +381,7 @@
 
   
   <!--- Share on Twitter -->
-    <a href="https://twitter.com/intent/tweet?text=First+post%21+http://localhost:4000/2019-04-03-first-post/"
+    <a href="https://twitter.com/intent/tweet?text=MacOS%E9%81%8B%E7%94%A8terminal%E9%80%B2%E8%A1%8C%E9%81%A0%E7%AB%AF%E9%80%A3%E7%B7%9A%E5%8F%8A%E6%AA%94%E6%A1%88%E5%82%B3%E8%BC%B8+http://localhost:4000/2020-01-30-mac-terminal/"
       class="btn btn-social-icon btn-twitter" title="Share on Twitter">
       <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
       <span class="sr-only">Twitter</span>
@@ -345,7 +390,7 @@
 
   
   <!--- Share on Facebook -->
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2019-04-03-first-post/"
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/2020-01-30-mac-terminal/"
       class="btn btn-social-icon btn-facebook" title="Share on Facebook">
       <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
       <span class="sr-only">Facebook</span>
@@ -356,7 +401,7 @@
 
   
   <!--- Share on LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2019-04-03-first-post/"
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2020-01-30-mac-terminal/"
       class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
       <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
       <span class="sr-only">LinkedIn</span>
@@ -371,10 +416,10 @@
 
       <ul class="pager blog-pager">
         
-        
-        <li class="next">
-          <a href="/2019-04-11-cloud-invoice/" data-toggle="tooltip" data-placement="top" title="雲端發票怎麼用？申請教學及秘技解說">Next Post &rarr;</a>
+        <li class="previous">
+          <a href="/2019-10-28-chromatics/" data-toggle="tooltip" data-placement="top" title="網站配色好難嗎？一起培養美的視角吧">&larr; Previous Post</a>
         </li>
+        
         
       </ul>
 
